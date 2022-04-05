@@ -9,7 +9,7 @@
 <body>
 
 <form name="myForm" action="MatInsertServlet" onsubmit="return validateForm()" method="post" >
-<h2> Insert</h2></center><br><br>
+<h2> Insert Materials</h2></center><br><br>
 
            <div class="billformInner">
 <table>
