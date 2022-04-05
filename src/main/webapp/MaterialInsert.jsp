@@ -15,7 +15,7 @@
 <table>
 
    <tr>
-   <th><h3>Material No</h3></th> <th><input type="text"  name="mat_id" id="mat_id" placeholder="RM001" ><br><br></th></tr>
+   <th><h3>Material No</h3></th> <th><input type="text"  name="mat_id" id="mat_id" placeholder="m00" ><br><br></th></tr>
     <tr>
     <th><h3>Material Type</h3></th> <th><select name="mat_type" id="mat_type">
 			
