@@ -25,10 +25,8 @@ public class MatInsertServlet extends HttpServlet {
 		String mat_id=request.getParameter("mat_id");
 		String mat_type=request.getParameter("mat_type");
 		String mat_name=request.getParameter("mat_name");
-		
 		int mat_qty= Integer.parseInt(request.getParameter("mat_qty"));
 		int  mat_limit=Integer.parseInt(request.getParameter("mat_limit"));
-	
 		String mat_price=request.getParameter("mat_price");
 		
 		
@@ -42,7 +40,7 @@ public class MatInsertServlet extends HttpServlet {
 			List<material>materialdetails=materialDBUtil.getmaterialdetails(mat_id);
 			request.setAttribute("materialdetails", materialdetails);
 			
-			RequestDispatcher dis=request.getRequestDispatcher("Sucsess.jsp");
+			RequestDispatcher dis=request.getRequestDispatcher("MaterialDisplay.jsp");
 			dis.forward(request, response);
 	}
 	else {
