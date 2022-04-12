@@ -53,17 +53,29 @@ ResultSet rs=st.executeQuery(sql);
                  </select> <br><br></th></tr>
                  
                   <tr>
-   <th><h3>Quantity</h3></th> <th><input type="text"  name="mat_qty" id="mat_qty" placeholder="RM001"  value="<%=rs.getString(4)%>"><br><br></th></tr>
+    <th><h3>Material Use For</h3></th> <th><select name="mat_use" id="mat_use">
+    
+				<option  value="<%=rs.getString(4)%>" ><%=rs.getString(4)%>  </option>		
+ 				 <option value="Ceramic Plate">Ceramic Plate</option>
+  				 <option value="Ceramic Mug">Ceramic Mug</option>
+  				  <option value="Ceramic Cup">Ceramic Cup</option>
+  				 <option value="Ceramic printed Plate">Ceramic printed Plate</option>
+  				 <option value="Ceramic printed Cup">Ceramic printed Cup</option>
+  				 
+                  </select> <br><br></th></tr>
+                 
+                  <tr>
+   <th><h3>Quantity</h3></th> <th><input type="text"  name="mat_qty" id="mat_qty" placeholder="RM001"  value="<%=rs.getString(5)%>"><br><br></th></tr>
     
   
     <tr>
-   <th> <h3>Limited Material</h3></th>  <th><input  type="text" name="mat_limit" name="text" id="mat_limit" placeholder="number"  value="<%=rs.getString(5)%>" ><br><br></th></tr>
+   <th> <h3>Limited Material</h3></th>  <th><input  type="text" name="mat_limit" name="text" id="mat_limit" placeholder="number"  value="<%=rs.getString(6)%>" ><br><br></th></tr>
    
    <tr>
-   <th> <h3>Less Material</h3></th>  <th><input  type="text" name="mat_less" name="text" id="mat_less" placeholder="number"  value="<%=rs.getString(6)%>" ><br><br></th></tr>
+   <th> <h3>Less Material</h3></th>  <th><input  type="text" name="mat_less" name="text" id="mat_less" placeholder="number"  value="<%=rs.getString(7)%>" ><br><br></th></tr>
    
      <tr>
-   <th> <h3>Price</h3></th>  <th><input  type="text" name="mat_price" name="text" id="mat_uprice" placeholder="Rs"  value="<%=rs.getString(7)%>" readonly><br><br></th></tr>
+   <th> <h3>Price</h3></th>  <th><input  type="text" name="mat_price" name="text" id="mat_price" placeholder="Rs"  value="<%=rs.getString(8)%>" readonly><br><br></th></tr>
    
    
                   <% 
@@ -72,7 +84,7 @@ ResultSet rs=st.executeQuery(sql);
     
     </table>
    
-    <input type="submit" name="submit" value="Update" id="update" onclick="alert( 'This item Updated!!');">
+    <input type="submit" name="submit" value="Update" id="update" onclick="alert( 'This Quantity Updated!!');">
     <br><br>
 
 

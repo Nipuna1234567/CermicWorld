@@ -25,6 +25,7 @@ public class MatInsertServlet extends HttpServlet {
 		String mat_id=request.getParameter("mat_id");
 		String mat_type=request.getParameter("mat_type");
 		String mat_name=request.getParameter("mat_name");
+		String mat_use=request.getParameter("mat_use");
 		int mat_qty= Integer.parseInt(request.getParameter("mat_qty"));
 		int  mat_limit=Integer.parseInt(request.getParameter("mat_limit"));
 		String mat_price=request.getParameter("mat_price");
@@ -32,7 +33,7 @@ public class MatInsertServlet extends HttpServlet {
 		
 		boolean isTrue;
 		
-		isTrue=materialDBUtil.insertmaterial(mat_id, mat_type, mat_name, mat_qty, mat_limit, mat_price);
+		isTrue=materialDBUtil.insertmaterial(mat_id, mat_type, mat_name,mat_use, mat_qty, mat_limit, mat_price);
 		
 		if(isTrue == true) {
 			
