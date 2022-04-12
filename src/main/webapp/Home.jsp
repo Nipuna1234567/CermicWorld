@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+<<<<<<< HEAD
+	<title>Ceramic World</title>
+=======
 	<title>Ceramic</title>
+>>>>>>> branch 'master' of https://github.com/SashinthaD/CeramicWorld.git
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
