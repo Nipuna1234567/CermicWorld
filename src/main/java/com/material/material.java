@@ -5,17 +5,19 @@ public class material {
 	private String mat_id;
 	private String mat_type;
 	private String mat_name;
+	private String mat_use;
 	private String mat_qty;
 	private String mat_limit;
 	private String mat_less;
 	private String mat_price;
 	
-	public material(String mat_id, String mat_type, String mat_name, String mat_qty, String mat_limit, String mat_less,
+	public material(String mat_id, String mat_type, String mat_name,String mat_use, String mat_qty, String mat_limit, String mat_less,
 			String mat_price) {
 		super();
 		this.mat_id = mat_id;
 		this.mat_type = mat_type;
 		this.mat_name = mat_name;
+		this.mat_use = mat_use;
 		this.mat_qty = mat_qty;
 		this.mat_limit = mat_limit;
 		this.mat_less = mat_less;
@@ -46,6 +48,13 @@ public class material {
 
 	public void setMat_name(String mat_name) {
 		this.mat_name = mat_name;
+	}
+	public String getMat_use() {
+		return mat_use;
+	}
+
+	public void setMat_use(String mat_use) {
+		this.mat_use = mat_use;
 	}
 
 	public String getMat_qty() {

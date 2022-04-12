@@ -18,12 +18,14 @@
 <th>Material Id</th>
 <th>Material Type </th>
 <th>Material Name</th>
+<th>Material Use For</th>
 <th>Quantity</th>
 <th>Material Limit</th>
 <th>Less Material Quantity</th>
 <th>Material Price</th>
 
-<th>update</th>
+<th>Update</th>
+<th>Delete</th>
 
 
 </tr>
@@ -44,13 +46,15 @@ while(rs.next()){
 <td name="mat_id"><%=rs.getString(1)%></td>
 <td name="mat_type"><%=rs.getString(2)%></td>
 <td name="mat_name"><%=rs.getString(3)%></td>
-<td name="mat_qty"><%=rs.getString(4)%></td>
-<td name="mat_limit"><%=rs.getString(5)%></td>
-<td name="mat_less"><%=rs.getString(6)%></td>
-<td name="mat_price"><%=rs.getString(7)%></td>
+<td name="mat_use"><%=rs.getString(4)%></td>
+<td name="mat_qty"><%=rs.getString(5)%></td>
+<td name="mat_limit"><%=rs.getString(6)%></td>
+<td name="mat_less"><%=rs.getString(7)%></td>
+<td name="mat_price"><%=rs.getString(8)%></td>
 
 
 <td><a href='MaterialUpdate.jsp?mat_id=<%=rs.getString(1) %>' class="update">Update</a></td>
+<td><a href='MaterialDelete.jsp?mat_id=<%=rs.getString(1) %>' class="update" id="delete">Delete</a></td>
 
 </tr>
 <%
