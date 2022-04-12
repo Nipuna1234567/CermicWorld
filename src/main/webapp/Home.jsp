@@ -27,7 +27,7 @@
 					</div>
 				<a href="HomePage.jsp">Home</a>
 				<a href="#">About</a>
-				<a href="DeliveryHome.jsp">Delivery</a>
+				<a href="DeliveryHome.jsp">Transport</a>
 				<a href="#">Services</a>
 				<a href="#">Contact</a>
 
