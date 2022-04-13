@@ -86,14 +86,14 @@
  
 </a>
 
-<c:url value="deletevehicle.jsp" var="delete">
-<c:param name="vehicle_no" value="${vno }"></c:param>
-<c:param name="vehicle_type" value="${vtype }"></c:param>
-<c:param name="vehicle_brand" value="${vbrand }"></c:param>
-<c:param name="chassi_no" value="${vchassi }"></c:param>
-<c:param name="vehicle_mileage" value="${vmileage}"></c:param>
-<c:param name="insurance" value="${vinsurance }"></c:param>
-<c:param name="emission" value="${vemission }"></c:param>
+<c:url value="VehicleDelete.jsp" var="delete">
+<c:param name="vehi_no" value="${vehi_no }"></c:param>
+<c:param name="vehi_type" value="${vehi_type }"></c:param>
+<c:param name="vehi_brand" value="${vehi_brand }"></c:param>
+<c:param name="chassi_no" value="${chassi_no }"></c:param>
+<c:param name="vehi_mileage" value="${vehi_mileage}"></c:param>
+<c:param name="ins_upto" value="${ins_upto }"></c:param>
+<c:param name="emi_upto" value="${emi_upto }"></c:param>
 
 
 </c:url>
