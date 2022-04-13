@@ -182,6 +182,33 @@ public class vehicleDButil {
 
 					}				
 				
+//delete
+				public static boolean Delete(String vehi_no) {
+					try {
+						con=vehicleConnection.getConnection();
+						stmt=con.createStatement();
+						String sql="Delete from transport_vehicle where vehi_no='"+vehi_no+"' ";
+						int rs=stmt.executeUpdate(sql);
+						
+						if(rs>0)
+						{
+						done=true;
+						}
+						else
+						{
+						done=false;
+						}
+
+						}
+					
+					catch(Exception e)
+					{
+					e.printStackTrace();
+					}
+					return done;
+				
+
+				}
 }
 
 
