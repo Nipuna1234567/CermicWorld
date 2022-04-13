@@ -1,0 +1,110 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+       <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<center>
+
+<div class="topic">
+					<h1>Vehicle Details</h1>	
+				</div>	
+<table class="center"><br>
+
+ 
+        <br>
+        <br>
+
+<c:forEach var="vehicledetails" items="${vehicledetails}">
+
+
+<c:set var="vehi_no" value="${vehicledetails.vehi_no}"/>
+<c:set var="vehi_type" value="${vehicledetails.vehi_type}"/>
+<c:set var="vehi_brand" value="${vehicledetails.vehi_brand}"/>
+<c:set var="chassi_no" value="${vehicledetails.chassi_no}"/>
+<c:set var="vehi_mileage" value="${vehicledetails.vehi_mileage}"/>
+<c:set var="ins_upto" value="${vehicledetails.ins_upto}"/>
+<c:set var="emi_upto" value="${vehicledetails.emi_upto}"/>
+
+<tr>
+     <td>Vehicle No</td>
+<td>${vehicledetails.vehi_no}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Vehicle type</td>
+<td>${vehicledetails.vehi_type}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Vehicle brand</td>
+<td>${vehicledetails.vehi_brand}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Chassi no</td>
+<td>${vehicledetails.chassi_no}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Vehicle mileage</td>
+<td>${vehicledetails.vehi_mileage}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Insurance</td>
+<td>${vehicledetails.ins_upto}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Emission</td>
+<td>${vehicledetails.emi_upto}</td>
+</tr> 
+<tr> 
+
+</c:forEach>
+ 
+</table>
+<c:url value="VehicleUpdate.jsp" var="update">
+<c:param name="vehi_no" value="${vehi_no }"></c:param>
+<c:param name="vehi_type" value="${vehi_type }"></c:param>
+<c:param name="vehi_brand" value="${vehi_brand }"></c:param>
+<c:param name="chassi_no" value="${chassi_no }"></c:param>
+<c:param name="vehi_mileage" value="${vehi_mileage}"></c:param>
+<c:param name="ins_upto" value="${ins_upto }"></c:param>
+<c:param name="emi_upto" value="${emi_upto }"></c:param>
+</c:url>
+<a  href="${update }">
+
+<button type="submit"  name="submit"  id="update" ><i class="fa fa-wrench"></i> &nbsp Update</button>
+ 
+</a>
+
+<c:url value="deletevehicle.jsp" var="delete">
+<c:param name="vehicle_no" value="${vno }"></c:param>
+<c:param name="vehicle_type" value="${vtype }"></c:param>
+<c:param name="vehicle_brand" value="${vbrand }"></c:param>
+<c:param name="chassi_no" value="${vchassi }"></c:param>
+<c:param name="vehicle_mileage" value="${vmileage}"></c:param>
+<c:param name="insurance" value="${vinsurance }"></c:param>
+<c:param name="emission" value="${vemission }"></c:param>
+
+
+</c:url>
+
+
+<a href="${delete}">
+
+<button type="submit"  name="delete"  id="delete" ><i class="fa fa-trash-alt"></i> &nbsp Delete</button>
+
+</a>
+
+
+</body>
+</html>
