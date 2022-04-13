@@ -4,7 +4,33 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Transport Vehicle Update</title>
+<script src="web/js/de.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Dates in other months</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
+  
+   <script>
+  $( function() {
+    $( "#datepicker2" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
+
+
 </head>
 <body>
 <%
