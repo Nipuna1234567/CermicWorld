@@ -5,6 +5,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Transport Vehicle Delete</title>
+<link rel="stylesheet" href="web/css/deliver.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="web/css/deliver2.css">
+
 </head>
 <body>
 
@@ -21,8 +26,13 @@
 %>
 <form name="myForm" action="VehicleDeleteServlet" onsubmit="return validateForm()" method="post" >
 
+<center>
+		<br>
+		<br>
+		<br>
+
 <div class="topic">
-<h1><center>Update Vehicle Details</h1>	
+<h1><center>Delete Vehicle Details</h1>	
 </div>
 
 <table>
