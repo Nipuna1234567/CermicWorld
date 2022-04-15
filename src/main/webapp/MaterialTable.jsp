@@ -5,7 +5,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Material Table</title>
+<link rel="stylesheet" href="web/css/material1.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="web/css/material2.css">
 </head>
 <body>
 
@@ -53,8 +57,8 @@ while(rs.next()){
 <td name="mat_price"><%=rs.getString(8)%></td>
 
 
-<td><a href='MaterialUpdate.jsp?mat_id=<%=rs.getString(1) %>' class="update">Update</a></td>
-<td><a href='MaterialDelete.jsp?mat_id=<%=rs.getString(1) %>' class="update" id="delete">Delete</a></td>
+<td><a href='MaterialUpdate.jsp?mat_id=<%=rs.getString(1) %>' class="update" id="update2">Update</a></td>
+<td><a href='MaterialDelete.jsp?mat_id=<%=rs.getString(1) %>' class="update" id="delete2">Delete</a></td>
 
 </tr>
 <%

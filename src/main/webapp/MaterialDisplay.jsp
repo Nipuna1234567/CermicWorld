@@ -7,13 +7,19 @@
 
 
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Material Display</title>
+
+<link rel="stylesheet" href="web/css/material1.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="web/css/material2.css">
+
 </head>
 <body>
 
 <h1>Material Details</h1>	
-				</div>	
-<table class="center"><br>
+				
+
 
 <table>
 
