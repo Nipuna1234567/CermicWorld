@@ -5,7 +5,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Material Delete</title>
+
+
+<link rel="stylesheet" href="web/css/material1.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="web/css/material2.css">
+
 </head>
 <body>
 
@@ -84,7 +91,7 @@ ResultSet rs=st.executeQuery(sql);
     
     </table>
     
-    <input type="submit" name="delete" value="Delete" id="delete" onclick="alert('This Item Removed from Stock!');">
+    <input type="submit" name="delete" value="Delete" id="delete" onclick="alert('This Material Removed from Table!');">
     <br><br>
 
 
