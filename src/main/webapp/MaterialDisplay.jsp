@@ -75,6 +75,42 @@
 </table>
 
 
+<c:url value="MaterialUpdate.jsp" var="update">
+
+<c:param name="mat_id" value="${mat_id }"></c:param>
+<c:param name="mat_type" value="${mat_type}"></c:param>
+<c:param name="mat_name" value="${mat_name}"></c:param>
+<c:param name="mat_qty" value="${mat_qty}"></c:param>
+<c:param name="mat_limit" value="${mat_limit}"></c:param>
+<c:param name="mat_less" value="${mat_less}"></c:param>
+<c:param name="mat_price" value="${mat_price }"></c:param>
+
+</c:url>
+<a  href="${update }">
+
+<button type="submit"  name="update"  id="update" ><i class="fas fa-shipping-fast"></i> &nbsp Update</button>
+  
+</a>
+
+<c:url value="Materialdelete.jsp" var="delete">
+
+<c:param name="mat_id" value="${mat_id }"></c:param>
+<c:param name="mat_type" value="${mat_type}"></c:param>
+<c:param name="mat_name" value="${mat_name}"></c:param>
+<c:param name="mat_qty" value="${mat_qty}"></c:param>
+<c:param name="mat_limit" value="${mat_limit}"></c:param>
+<c:param name="mat_less" value="${mat_less}"></c:param>
+<c:param name="mat_price" value="${mat_price }"></c:param>
+
+</c:url>
+
+
+<a href="${delete}">
+
+<button type="submit"  name="delete"  id="delete" ><i class="fa fa-trash-alt"></i> &nbsp Delete</button>
+
+</a>
+
 
 
 
