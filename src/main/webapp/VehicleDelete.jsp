@@ -76,9 +76,10 @@
     <tr>
     <th><h3>Vehicle type</h3></th><th><select name="vehi_type" id="vehi_type"   >
 			<option  value="<%=vehi_type%>" ><%=vehi_type%>  </option>
- 				 <option  value="Lorry">Lory</option>
-  				 <option value="bike" >Bike </option>
-                 <option value="three wheel">Three wheel </option>
+ 				 <option value="Prime movers">Prime Movers</option>
+ 				 <option value="lorry">Lorry</option>
+ 				 <option value="double cab">Double Cab</option>
+  				 <option value="van">Van</option>
                   </select> <br><br></th></tr>
      <tr>
    <th> <h3>Vehicle brand</h3></th>  <th><input  type="text" name="vehi_brand" name="text" id="vehi_brand" placeholder="Vehicle Brand" value="<%=vehi_brand %>"readonly><br><br></th></tr>

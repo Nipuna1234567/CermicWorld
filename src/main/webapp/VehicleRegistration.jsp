@@ -89,9 +89,11 @@
     <tr>
     <th><h3>Vehicle type</h3></th> <th><select name="vehi_type" id="vehi_type">
 			
+				 <option value="Prime movers">Prime Movers</option>
  				 <option value="lorry">Lorry</option>
-  				 <option value="bike">Bike</option>
-                 <option value="three wheel">Three wheel</option>
+ 				 <option value="double cab">Double Cab</option>
+  				 <option value="van">Van</option>
+                 
                 </select> <br><br></th></tr>
      <tr>
    <th> <h3>Vehicle brand</h3></th>  <th><input  type="text" name="vehi_brand" name="text" id="vehi_brand" placeholder="Vehicle brand"  required><br><br></th></tr>
@@ -110,9 +112,10 @@
 
 
 <br><br>
-   <input type="reset" name="reset" value="Clear"  id="reset" onclick="alert('You want to clear this??');">
+   
    
     <input type="submit" name="submit" value="Register"  id="submit" onclick="alert('You want to register this vehicle??');">
+    <input type="reset" name="reset" value="Clear"  id="reset" onclick="alert('You want to clear this??');">
     <br><br>
     </form>
   
