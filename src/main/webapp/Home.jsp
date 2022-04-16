@@ -92,7 +92,7 @@
 				<div class="intro-colom">
 					<div class="colom-part">
 						<div class="colom-img">
-							<a href="ProductManagementHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
+							<a href="SalesHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
 						</div>
 
 						<div>

@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Shop Update</title><br><br>
+<title>Sales Management</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -53,50 +52,32 @@ pageEncoding="ISO-8859-1"%>
 <br>
 
 
-
-
 <center>
-<br>
-<br>
-<br>
+<h2>Sales Management</h2></center><br><br>
+
+           <div class="billformInner">
 
 
-<%
-String sh_id= request.getParameter("sh_id");
-String sh_name=request.getParameter("sh_name");
-String sh_phone=request.getParameter("sh_phone");
-String sh_address=request.getParameter("sh_address");
+<fieldset>
 
-
-
-%>
-<form name="myForm" action="ShopUpdateServlet" onsubmit="return validateForm()" method="post" >
+<tr><th><center><a href="ShopInsert.jsp"><input type="submit" name="submit" id="homeb" value="Add New Shops " ></a><br></th></tr>
+<tr><th><center><a href="ShopdetailsView.jsp"><input type="submit" name="submit" id="homeb" value="View Shop Details "></a><br></th></tr>
+<tr><th><center><a href="OrderInsert.jsp"><input type="submit" name="submit" id="homeb" value=" Add Shops Order"></a><br></th></tr>
+<tr><th><center><a href="OrderdetailsView.jsp"><input type="submit" name="submit"  id="homeb" value="View Shops Order Details "></a><br></th></tr>
+<tr><th><center><a href="OrderReport.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Accounting Report</button></a><br><br><br></th></tr>
 
 
 
-<div class="topic">
-<h1><center>Update Shop</h1>
+</fieldset>
+</div>
 </div>
 
+		
+		
+       
 
 
-<table>
-<tr>
-<th><h3>Shop ID</h3></th> <th><input type="text" name="sh_id" id="sh_id" placeholder="ID" value="<%=sh_id %>" readonly><br><br></th></tr>
-<tr>
-<tr>
-<th> <h3>Shop Name</h3></th> <th><input type="text" name="sh_name" name="text" id="sh_name" placeholder="Shop Name" value="<%=sh_name %>"><br><br></th></tr>
-<tr>
-<th> <h3>Shop Phone</h3></th> <th><input type="text" name="sh_phone" name="text" id="sh_phone" placeholder="Phone No" value="<%=sh_phone %>"><br><br></th></tr>
-<tr>
-<th> <h3>Shop Address</h3></th> <th><input type="text" name="sh_address" name="text" id="sh_address" placeholder="Address" value="<%=sh_address %>"required><br><br></th></tr>
-<tr>
-</table>
-
-<input type="submit" name="update" value="Update" id="update" onclick="alert('Are sure you want to update shop details?');">
-<br><br>
-
-
+ 
   <br>
   <br><br>
   <br>
