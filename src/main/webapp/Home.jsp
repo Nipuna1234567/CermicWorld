@@ -5,17 +5,19 @@
 
 	<title>Ceramic World</title>
 
-	<title>CeramicWorld</title>
+
 
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-	<link rel="stylesheet" href="web/css/stylescer.css">
+	
+	<link rel="stylesheet" href="web/css/st.css">
+	<script src="web/js/de.js"></script>
+	
+<!-- Footer-->	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="web/css/Footer.css">
+<link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
+<link rel="stylesheet" type="text/css" href="web/css/stylescer.css">
 
 </head>
 <body>
@@ -27,12 +29,12 @@
 
 				<nav>
 					<div class="content">
-						<img class="img" src="web/images/log.png" alt="logo image">
+						<img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 					</div>
-				<a href="HomePage.jsp">Home</a>
+				<a href="Home.jsp">Home</a>
 				<a href="#">About</a>
 				<a href="DeliveryHome.jsp">Transport</a>
-				<a href="#">Services</a>
+				
 				<a href="#">Contact</a>
 
 				</nav>
@@ -42,14 +44,14 @@
 			<div class="w3-content w3-section"  style="margin-right: 0px;margin-left: 0px;  ">
 
 
-			  <img class="mySlides w3-animate-fading" src="web/images/img1.jpg" >
-			  <img class="mySlides w3-animate-fading" src="web/images/img2.jpg">
-			  <img class="mySlides w3-animate-fading" src="web/images/img3.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img4.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img5.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img6.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img7.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img8.jpg" >
+			  <img class="mySlides w3-animate-fading" src="web/images/BG1.jpg" >
+			  <img class="mySlides w3-animate-fading" src="web/images/BG2.jpg">
+			  <img class="mySlides w3-animate-fading" src="web/images/BG3.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/BG4.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/BG5.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/img.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/img.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/img.jpg" >
 
 			</div>
 		</div>
@@ -104,6 +106,73 @@ function carousel() {
 </script>
 
 
+<footer class="container-fluid bg-grey py-5">
+<div class="container">
+   <div class="row">
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 ">
+               <div class="logo-part">
+                  <img src="web/images/lo.png"  width="350px" height="180px"  align="right" >
+                  <p1>Ceramic World© (pvt).Ltd Company</p1>
+                  
+                  
+               </div>
+            </div>
+            <div class="col-md-6 px-4">
+               <h6> About Company</h6>
+               <p>We a gathering of multi skilled.</p>
+               <a href="#" class="btn-footer"> More Info </a><br>
+               <a href="#" class="btn-footer"> Contact Us</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-md-6">
+         <div class="row">
+            <div class="col-md-6 px-4">
+               <h6> Help us</h6>
+               <div class="row ">
+                  <div class="col-md-6">
+                     <ul>
+                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="#"> About</a> </li>
+                        <li> <a href="#"> Service</a> </li>
+                        <li> <a href="#"> Team</a> </li>
+                        <li> <a href="#"> Help</a> </li>
+                        <li> <a href="#"> Contact</a> </li>
+                     </ul>
+                  </div>
+                  
+                  <div class="col-md-6 px-4">
+                  
+                     <ul>
+                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <li> <a href="#"> Supplier</a> </li>
+                        <li> <a href="ProductManagementHome.jsp"> Product</a> </li>
+                        <li> <a href="#"> Sales</a> </li>
+                        <li> <a href="TransportHome.jsp"> Transport </a> </li>
+                        <li> <a href="#"> Policy</a> </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-6 ">
+               <h6> Newsletter</h6>
+               <div class="social">
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+               </div>
+               <form class="form-footer my-3">
+                  <input type="text"  placeholder="search here...." name="search">
+                  <input type="button" value="Go" >
+               </form>
+               <p>World Best Ceramic Company </p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</footer>
 
 
 
@@ -113,52 +182,6 @@ function carousel() {
 
 
 
-
-
-
-			</div>
-			<footer class="footer">
-				 <div class="container">
-					<div class="row">
-						<div class="footer-col">
-							<h4>company</h4>
-							<ul>
-								<li><a href="#">about us</a></li>
-								<li><a href="#">our services</a></li>
-								<li><a href="#">privacy policy</a></li>
-								
-							</ul>
-						</div>
-						<div class="footer-col">
-							<h4>Contact Us</h4>
-							<ul>
-								<li><a href="#">0116234556</a></li>
-								<li><a href="#">0116234568</a></li>
-								<li><a href="#">ceramicworld@gmail.com</a></li>
-
-							</ul>
-						</div>
-						<div class="footer-col">
-							<h4>online shop</h4>
-							<ul>
-								<li><a href="#">Inventory</a></li>
-								<li><a href="#">Suppliers</a></li>
-								<li><a href="#">Exports</a></li>
-
-							</ul>
-						</div>
-						<div class="footer-col">
-							<h4>follow us</h4>
-							<div class="social-links">
-								<a href="#"><i class="fab fa-facebook-f"></i></a>
-								<a href="#"><i class="fab fa-twitter"></i></a>
-								<a href="#"><i class="fab fa-instagram"></i></a>
-								<a href="#"><i class="fab fa-linkedin-in"></i></a>
-							</div>
-						</div>
-					</div>
-				 </div>
-			</footer>
 
 		</div>
 	</div>
