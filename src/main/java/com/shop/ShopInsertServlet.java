@@ -48,7 +48,7 @@ public class ShopInsertServlet extends HttpServlet {
 			List<Shop> shopDetails = ShopDBUtil.getshopdetails(sh_id);
 			request.setAttribute("shopDetails", shopDetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("Success.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("shopaccount.jsp");
 			dis.forward(request, response);
 		} else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("Unsuccess.jsp");
