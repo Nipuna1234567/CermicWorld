@@ -14,8 +14,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-
-
 <link rel="stylesheet" href="web/css/shopinsert.css">
 
 </head>
@@ -83,8 +81,9 @@
 
  <center>
 
-    <input type="submit" name="Clear" value="Clear"  id="clear">
+   
     <input type="submit" name="submit" value="Save"  id="submit" onclick="alert('You want to save the shop??');">
+    <input type="reset" name="reset" value="Clear" id="reset" onclick="alert('You want to clear the details??');">
     <br><br>
     </form>
     

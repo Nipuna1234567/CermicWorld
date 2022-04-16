@@ -661,5 +661,46 @@ a:hover {
 	max-width: 100%;
 	margin:auto;
 }
+
+#deliver2{
+	 margin-top:5%;
+	 margin-left: 5%;
+	 
+	 width:15%;
+	 font-size:large;
+	 background-color: #3487fa;
+	 height:40px;
+	 border:none;
+	 color:white;
+	 border-radius:8px;
+	 cursor:pointer;
+	 transition: 0.5s;
+	 text-decoration: none;
+	
+	 
+	 
+}	
+
+#deliver2:hover {
+	box-shadow: 0 10px 15px  #74bff7;
+}
  
-    
+#reset{
+margin-left: 0%;
+width:15%;
+font-size:large;
+background-color: #d40000;
+height:40px;
+border:none;
+color:white;
+border-radius:8px;
+cursor:pointer;
+transition: 0.5s;
+
+}
+
+
+
+#reset:hover {
+box-shadow: 0 10px 15px #ff3636;
+}
