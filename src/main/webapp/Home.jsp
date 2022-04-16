@@ -42,12 +42,12 @@
 		<div class="banner-area">
 			<div class="w3-content w3-section"  style="margin-right: 0px;margin-left: 0px;  ">
 
-
-			  <img class="mySlides w3-animate-fading" src="web/images/BG1.jpg" >
-			  <img class="mySlides w3-animate-fading" src="web/images/BG6.jpg">
-			  <img class="mySlides w3-animate-fading" src="web/images/BG3.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/BG4.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/BG5.jpg" >
+	
+			  <img class="mySlides w3-animate-fading" src="web/images/BN.jpg" >
+			  <img class="mySlides w3-animate-fading" src="web/images/BN2.jpg">
+			  <img class="mySlides w3-animate-fading" src="web/images/BN3.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/BG3.jpg" >
+				<img class="mySlides w3-animate-fading" src="web/images/BG1.jpg" >
 				
 
 			</div>
