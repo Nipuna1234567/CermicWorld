@@ -29,7 +29,7 @@ public class ShopDeleteServlet extends HttpServlet {
 
 		List<Shop>Shopdetails=ShopDBUtil.getshopdetails(sh_id);
 		request.setAttribute("ShopDetails", Shopdetails);
-		RequestDispatcher dis=request.getRequestDispatcher("ShopInsert.jsp");
+		RequestDispatcher dis=request.getRequestDispatcher("ShopdetailsView.jsp");
 		dis.forward(request,response);
 		}
 		else

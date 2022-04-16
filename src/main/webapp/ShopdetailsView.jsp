@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-
+    pageEncoding="ISO-8859-1"%>
+      <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Shop Update</title><br><br>
+<title>Shop Table</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -13,13 +13,18 @@ pageEncoding="ISO-8859-1"%>
 	<script src="web/js/de.js"></script>
 	
 <!-- Footer-->	
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/transport.css">
 	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+	<link rel="stylesheet" href="web/css/material1.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
+
+<link rel="stylesheet" href="web/css/shopinsert.css">
 	
-	<link rel="stylesheet" href="web/css/shopinsert.css">
 	
 </head>
 <body>
@@ -52,52 +57,62 @@ pageEncoding="ISO-8859-1"%>
 <br>
 <br>
 
-
-
-
 <center>
-<br>
-<br>
-<br>
+
+<table class="center"><br>
+
+
+
+<tr>
+<th>Shop ID</th>
+<th>Shop Name </th>
+<th>Shop Phone</th>
+<th>Shop Address</th>
+
+
+<th>Update</th>
+<th>Delete</th>
+
+
+</tr>
+
 
 
 <%
-String sh_id= request.getParameter("sh_id");
-String sh_name=request.getParameter("sh_name");
-String sh_phone=request.getParameter("sh_phone");
-String sh_address=request.getParameter("sh_address");
-
-
+try {
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","Nipuna1234");
+String sql="Select * from add_shop" ;
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery(sql);
+while(rs.next()){
 
 %>
-<form name="myForm" action="ShopUpdateServlet" onsubmit="return validateForm()" method="post" >
+<tr>
+<td name="sh_id"><%=rs.getString(1)%></td>
+<td name="sh_name"><%=rs.getString(2)%></td>
+<td name="sh_phone"><%=rs.getString(3)%></td>
+<td name="sh_address"><%=rs.getString(4)%></td>
 
 
 
-<div class="topic">
-<h1><center>Update Shop</h1>
-</div>
+<td><a href='shopupdate.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="update2">Update</a></td>
+<td><a href='shopdelete.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="delete2">Delete</a></td>
+
+</tr>
+<%
+}
 
 
+}catch(Exception e)
+{
+e.printStackTrace();
+}
+%>
 
-<table>
-<tr>
-<th><h3>Shop ID</h3></th> <th><input type="text" name="sh_id" id="sh_id" placeholder="ID" value="<%=sh_id %>" readonly><br><br></th></tr>
-<tr>
-<tr>
-<th> <h3>Shop Name</h3></th> <th><input type="text" name="sh_name" name="text" id="sh_name" placeholder="Shop Name" value="<%=sh_name %>"><br><br></th></tr>
-<tr>
-<th> <h3>Shop Phone</h3></th> <th><input type="text" name="sh_phone" name="text" id="sh_phone" placeholder="Phone No" value="<%=sh_phone %>"><br><br></th></tr>
-<tr>
-<th> <h3>Shop Address</h3></th> <th><input type="text" name="sh_address" name="text" id="sh_address" placeholder="Address" value="<%=sh_address %>"required><br><br></th></tr>
-<tr>
 </table>
 
-<input type="submit" name="update" value="Update" id="update" onclick="alert('Are sure you want to update shop details?');">
-<br><br>
-
-
-  <br>
+ <br>
   <br><br>
   <br>
   <br>
@@ -175,6 +190,6 @@ String sh_address=request.getParameter("sh_address");
    </div>
 </div>
 </footer>
-</body>
 
+</body>
 </html>
