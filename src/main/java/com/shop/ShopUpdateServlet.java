@@ -34,7 +34,7 @@ public class ShopUpdateServlet extends HttpServlet {
 		List<Shop>shopdetails=ShopDBUtil.getshopdetails(sh_id);
 		request.setAttribute("shopDetails", shopdetails);
 
-		RequestDispatcher dis=request.getRequestDispatcher("Success.jsp");
+		RequestDispatcher dis=request.getRequestDispatcher("shopaccount.jsp");
 		dis.forward(request,response);
 		}
 		else
