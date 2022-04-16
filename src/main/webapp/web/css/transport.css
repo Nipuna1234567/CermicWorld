@@ -662,4 +662,22 @@ a:hover {
 	margin:auto;
 }
  
+ 
+ #reset{
+	 margin-left: 0%;
+	 width:15%;
+	 font-size:large;
+	 background-color:  #d40000;
+	 height:40px;
+	 border:none;
+	 color:white;
+	 border-radius:8px;
+	 cursor:pointer;
+	 transition: 0.5s;
+	 
+}	
+
+#reset:hover {
+	box-shadow: 0 10px 15px  #ff3636;
+}
     

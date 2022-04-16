@@ -10,7 +10,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	
-	<link rel="stylesheet" href="web/css/st.css">
+	
 	<script src="web/js/de.js"></script>
 	
 <!-- Footer-->	
@@ -31,11 +31,10 @@
 					<div class="content">
 						<img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 					</div>
-				<a href="Home.jsp">Home</a>
-				<a href="#">About</a>
-				<a href="TransportHome.jsp">Transport</a>
-				
+				<a href="Home.jsp">Home</a>	
+				<a href="#">News</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 
 				</nav>
 			</div>
@@ -45,48 +44,97 @@
 
 
 			  <img class="mySlides w3-animate-fading" src="web/images/BG1.jpg" >
-			  <img class="mySlides w3-animate-fading" src="web/images/BG2.jpg">
+			  <img class="mySlides w3-animate-fading" src="web/images/BG6.jpg">
 			  <img class="mySlides w3-animate-fading" src="web/images/BG3.jpg" >
 				<img class="mySlides w3-animate-fading" src="web/images/BG4.jpg" >
 				<img class="mySlides w3-animate-fading" src="web/images/BG5.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img.jpg" >
-				<img class="mySlides w3-animate-fading" src="web/images/img.jpg" >
+				
 
 			</div>
 		</div>
 
 		<div class="content-area">
 			<div class="wrapper">
+			<br>
+<br>
+<br>
+<br>
+	<center>
+<h2>Management</h2></center><br><br>		
 
-		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>		<br><br><br>
+		<br><br><br>		<br><br><br>		<br><br><br>
 
-<div class="flex">
+			<div class="introduction-container">
+				<div class="intro-colom">
+					<div class="colom-part">
+						<div class="colom-img">
+							<a href="Floral.php"><img src="web/images/supplier.png" width="80px" height="80px"></a>
+						</div>
 
-	<div class="para1">
-		<h2>WHO ARE WE ?</h2>
-		<p>Auto mart Service Station was established in 2011 in Kandy. At that point there was a huge need of a service station for the vehicles around Kandy. When in 2011.  with the profit within these years the company has decided to establish a new branch in Colombo as well. And this company is moving fast and capable of establishing few more branches around the country as well.</p>
-	</div>
-	<div class="para2">
-			<h2>OUR MISSION...</h2>
-		<p> Our Mission is to provide honest automotive repair, quality workmanship and exceptional service. This will allow long-term growth and profitability while providing future opportunities for our employees. This Mission is only possible by attaining the following goals that we established for our business, our employees and our customers.</p>
-	</div>
-	<div class="para3">
-		<h2>WHY US ?</h2>
-		<ul class="ul">
-			<li class="li">Dedication to Customer Satisfaction</li>
-			<li class="li">24 Hour Service</li>
-			<li class="li">Multiple Locations</li>
-			<li class="li">Preferred by Insurance Companies</li>
-			<li class="li">Special Offers</li>
-			<li class="li">Certified Technicians</li>
-			<li class="li">Warranties</li>
-			<li class="li">Same Day Repairs</li>
-		</ul>
-	</div>
-</div>
+						<div>
+							<h3>Supplier Management</h3>
+							<p>The main purpose of this function is handling the suppliers perfectly.</p>
+						</div>
+					</div>
 
+					<div class="colom-part">
+						<div class="colom-img">
+							 <a href="InvitationCards.php"><img src="web/images/Product.png" width="80px" height="80px"></a>
+						</div><!-- colom-img -->
 
+						<div>
+							<h3>Product Management</h3>
+              				<p>Store Raw materials and products according to types.</p>
+						</div>
+					</div><!-- colom-part -->			
+				</div>
+
+				<div class="intro-colom">
+					<div class="colom-part">
+						<div class="colom-img">
+							<a href="ProductManagementHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
+						</div>
+
+						<div>
+							<h3>Sales Management</h3>
+							<p>Sales management is primarily about delivering.</p>
+						</div>
+					</div>
+
+					<div class="colom-part">
+						<div class="colom-img">
+							 <a href="TransportHome.jsp"><img src="web/images/Transport.png" width="80px" height="80px"></a>
+						</div><!-- colom-img -->
+
+						<div>
+							<h3>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspTransport management </h3>
+              				<p>&nbsp  &nbsp &nbsp &nbsp &nbsp This process is keeping track of sell orders .</p>
+						</div>
+					</div><!-- colom-part -->			
+				</div>
+
+			
+	
+			</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <script>
 var myIndex = 0;
@@ -114,7 +162,7 @@ function carousel() {
             <div class="col-md-6 ">
                <div class="logo-part">
                   <img src="web/images/lo.png"  width="350px" height="180px"  align="right" >
-                  <p1>Ceramic World© (pvt).Ltd Company</p1>
+                  <p>Ceramic World© (pvt).Ltd Company</p>
                   
                   
                </div>
@@ -134,7 +182,7 @@ function carousel() {
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
