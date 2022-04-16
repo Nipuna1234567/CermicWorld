@@ -8,14 +8,15 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	<link rel="stylesheet" href="web/css/deliver2.css">
-	<link rel="stylesheet" href="web/css/st.css">
+	
 	<script src="web/js/de.js"></script>
 	
 <!-- Footer-->	
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
+<link rel="stylesheet" href="web/css/transport.css">
+	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 	
 </head>
 <body>
@@ -29,9 +30,9 @@
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
 		
-			    <a href="HomePage.jsp">Home</a>
+			    <a href="Home.jsp">Home</a>
 				<a href="#">About</a>
-				<a href="DeliveryHome.jsp">Transport</a>
+				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
 		</nav>
 		
@@ -68,6 +69,23 @@
 </fieldset>
 </div>
 </div>
+
+		
+		
+       
+
+
+ 
+  <br>
+  <br><br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
