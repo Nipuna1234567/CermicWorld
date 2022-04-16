@@ -16,13 +16,9 @@
 
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" href="web/css/transport.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	<link rel="stylesheet" href="web/css/material1.css">
+<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-
-
 <link rel="stylesheet" href="web/css/shopinsert.css">
 	
 	
@@ -96,7 +92,7 @@ while(rs.next()){
 
 
 
-<td><a href='shopupdate.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="update2">Update</a></td>
+<td><a href='shopupdate.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="deliver2">Update</a></td>
 <td><a href='shopdelete.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="delete2">Delete</a></td>
 
 </tr>

@@ -15,7 +15,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" href="web/css/transport.css">
 	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 	
 	<link rel="stylesheet" href="web/css/shopinsert.css">
