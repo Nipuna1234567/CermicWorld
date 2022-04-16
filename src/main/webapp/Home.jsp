@@ -92,6 +92,7 @@
 				<div class="intro-colom">
 					<div class="colom-part">
 						<div class="colom-img">
+
 							<a href="SalesHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
 
 							<a href="#"><img src="web/images/Sales.png" width="80px" height="80px"></a>
@@ -165,7 +166,7 @@ function carousel() {
             <div class="col-md-6 ">
                <div class="logo-part">
                   <img src="web/images/lo.png"  width="350px" height="180px"  align="right" >
-                  <p>Ceramic World© (pvt).Ltd Company</p>
+                  <p>Ceramic WorldÂ© (pvt).Ltd Company</p>
                   
                   
                </div>
