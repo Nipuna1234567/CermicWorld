@@ -110,7 +110,7 @@
 						</div><!-- colom-img -->
 
 						<div>
-							<h3>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspTransport management </h3>
+							<h3>&nbsp &nbsp Transport management </h3>
               				<p>&nbsp  &nbsp &nbsp &nbsp &nbsp This process is keeping track of sell orders .</p>
 						</div>
 					</div><!-- colom-part -->			
