@@ -29,11 +29,10 @@
     <div class="content">
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
-		
-			    <a href="Home.jsp">Home</a>
-				<a href="#">About</a>
+		 		<a href="Home.jsp">Home</a>
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -117,7 +116,7 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -129,7 +128,7 @@
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
                         <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
                         <li> <a href="#"> Sales</a> </li>

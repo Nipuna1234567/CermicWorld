@@ -58,9 +58,9 @@
 </div>
 		
 			    <a href="Home.jsp">Home</a>
-				<a href="#">About</a>
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -110,7 +110,7 @@
 
 
 <br><br>
-
+   <input type="reset" name="reset" value="Clear"  id="reset" onclick="alert('You want to clear this??');">
    
     <input type="submit" name="submit" value="Register"  id="submit" onclick="alert('You want to register this vehicle??');">
     <br><br>
@@ -165,7 +165,7 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -177,7 +177,7 @@
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
                         <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
                         <li> <a href="#"> Sales</a> </li>
