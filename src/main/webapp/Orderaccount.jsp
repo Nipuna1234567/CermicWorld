@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Supplier Management</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	
 	<script src="web/js/de.js"></script>
@@ -48,31 +49,74 @@
 <br>
 <br>
 <br>
+	
+	<style type="text/css">
+		body{
+			font-family: Hind SemiBold;
+		}
+	
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>
 
+</head>
+<body>
 
 <center>
-<h2>Supplier Management</h2></center><br><br>
-
-           <div class="billformInner">
-
-
-<fieldset>
-
-<tr><th><center><a href="SupplierCompany.jsp"><input type="submit" name="submit" id="homeb" value="Add New Supplier Company " ></a><br></th></tr>
-<tr><th><center><a href="Order.jsp"><input type="submit" name="submit" id="homeb" value="Add Supplier Order "></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit" id="homeb" value=" View Company Details"></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit"  id="homeb" value="View Order Details "></a><br></th></tr>
-<tr><th><center><a href="#"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Order Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
+	<div class="topic">
+<h1>Add Supplier Orders</h1>
 </div>
 
-	       
 
 
+
+
+<br>
+<br>
+
+<center>
+<Table>
+	
+	<c:forEach var="orderdetails" items="${orderdetails}">
+	
+	<c:set var="sup_oid" value="${orderdetails.sup_oid}"/>
+	<c:set var="qty" value="${orderdetails.qty}"/>
+	<c:set var="date" value="${orderdetails.date}"/>
+	<c:set var="comp_id" value="${orderdetails.comp_id}"/>
+	<c:set var="mat_id" value="${orderdetails.mat_id}"/>
+	
+	
+	
+	<tr>
+		<td>sup_oid</td>
+		<td>${orderdetails.sup_oid}</td>
+	</tr>
+	<tr>
+		<td>qty</td>
+		<td>${orderdetails.qty}</td>
+	</tr>
+	<tr>
+		<td>date</td>
+		<td>${orderdetails.date}</td>
+	</tr>
+	<tr>
+		<td>comp_id</td>
+		<td>${orderdetails.comp_id}</td>
+	</tr>
+	<tr>
+		<td>mat_id</td>
+		<td>${orderdetails.mat_id}</td>
+	</tr>
+	
+	
+
+
+	</c:forEach>
+	</table>
+	</center>
+	
+	
  
   <br>
   <br><br>
@@ -151,13 +195,9 @@
       </div>
    </div>
 </div>
-</footer>	
-		
-       
-
-
- 
-
+</footer>
+	
+	
+	
 </body>
-
 </html>
