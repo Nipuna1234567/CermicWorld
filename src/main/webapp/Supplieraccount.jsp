@@ -1,22 +1,27 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Supplier Management</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	
 	<script src="web/js/de.js"></script>
 	
 <!-- Footer-->	
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/Supplier.css">
 	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+	
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
 	
 </head>
 <body>
@@ -49,31 +54,75 @@
 <br>
 <br>
 
+	
+	
+	<style type="text/css">
+		body{
+			font-family: Hind SemiBold;
+		}
+	
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
 
-<center>
-<h2>Supplier Management</h2></center><br><br>
+	<table>
+	<c:forEach var="co" items="${SupplierCompanyDetails}">
+	
+	<c:set var="comp_id" value="${co.comp_id}"/>
+	<c:set var="comp_name" value="${co.comp_name}"/>
+	<c:set var="comp_type" value="${co.comp_type}"/>
+	<c:set var="comp_phone" value="${co.comp_phone}"/>
+	<c:set var="comp_address" value="${co.comp_address}"/>
+	<c:set var="comp_email" value="${co.comp_email}"/>
+	
+	
+	<tr>
+		<td>comp_id</td>
+		<td>${co.comp_id}</td>
+	</tr>
+	<tr>
+		<td>comp_name</td>
+		<td>${co.comp_name}</td>
+	</tr>
+	<tr>
+		<td>comp_type</td>
+		<td>${co.comp_type}</td>
+	</tr>
+	<tr>
+		<td>comp_phone</td>
+		<td>${co.comp_phone}</td>
+	</tr>
+	<tr>
+		<td>comp_address</td>
+		<td>${co.comp_address}</td>
+	</tr>
+	<tr>
+		<td>comp_email</td>
+		<td>${co.comp_email}</td>
+	</tr>
 
-           <div class="billformInner">
 
-
-<fieldset>
-
-<tr><th><center><a href="SupplierCompany.jsp"><input type="submit" name="submit" id="homeb" value="Add New Supplier Company " ></a><br></th></tr>
-<tr><th><center><a href="Order.jsp"><input type="submit" name="submit" id="homeb" value="Add Supplier Order "></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit" id="homeb" value=" View Company Details"></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit"  id="homeb" value="View Order Details "></a><br></th></tr>
-<tr><th><center><a href="#"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Order Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
-</div>
-
-	       
-
-
- 
+	</c:forEach>
+	</table>
+	
+	<br>
+	<c:url value="DeleteSupplierCompany.jsp" var="codelete">
+		<c:param name="comp_id" value="${comp_id}" />
+		<c:param name="comp_name" value="${comp_name}" />
+		<c:param name="comp_type" value="${comp_type}" />
+		<c:param name="comp_phone" value="${comp_phone}" />
+		<c:param name="comp_address" value="${comp_address}" />
+		<c:param name="comp_email" value="${comp_email}" />
+	
+	</c:url>
+	<a href="${codelete}">
+	<input type="button" name="delete" value="Delete">
+	</a>
+	
+	 
   <br>
   <br><br>
   <br>
@@ -151,13 +200,7 @@
       </div>
    </div>
 </div>
-</footer>	
-		
-       
-
-
- 
-
+</footer>
+	
 </body>
-
 </html>

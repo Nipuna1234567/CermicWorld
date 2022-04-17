@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Supplier Management</title>
+<title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -49,29 +49,59 @@
 <br>
 <br>
 
+</head>
+<body>
 
 <center>
-<h2>Supplier Management</h2></center><br><br>
-
-           <div class="billformInner">
 
 
-<fieldset>
-
-<tr><th><center><a href="SupplierCompany.jsp"><input type="submit" name="submit" id="homeb" value="Add New Supplier Company " ></a><br></th></tr>
-<tr><th><center><a href="Order.jsp"><input type="submit" name="submit" id="homeb" value="Add Supplier Order "></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit" id="homeb" value=" View Company Details"></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit"  id="homeb" value="View Order Details "></a><br></th></tr>
-<tr><th><center><a href="#"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Order Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
-</div>
-
-	       
-
+	<%
+	        
+			String comp_id = request.getParameter("comp_id");
+			String comp_name = request.getParameter("comp_name");
+			String comp_type = request.getParameter("comp_type");
+			String comp_phone= request.getParameter("comp_phone");
+			String comp_address= request.getParameter("comp_address");
+			String comp_email = request.getParameter("comp_email");
+			
+	%>
+	
+	
+	<h1> Delete Supplier Company</h1>
+	
+	<form action="SupplierCompanyDeleteServlet" method="post">
+	<table>
+		
+		<tr>
+			<td>Company ID</td>
+			<td><input type="text" id="comp_id" name="comp_id" value="<%= comp_id %>" readonly></td>
+		</tr>
+		<tr>
+		<td>Company Name</td>
+		<td><input type="text" id="comp_name" name="comp_name" value="<%= comp_name %>"readonly ></td>
+	</tr>
+	<tr>
+		<td>Company Type</td>
+		<td><input type="text" id="comp_type" name="comp_type" value="<%= comp_type %>" readonly></td>
+	</tr>
+	<tr>
+		<td>Company Phone</td>
+		<td><input type="text" id="comp_phone" name="comp_phone" value="<%= comp_phone %>" readonly></td>
+	</tr>
+	<tr>
+		<td>Company Address</td>
+		<td><input type="text" id="comp_address" name="comp_address" value="<%= comp_address %>" readonly></td>
+	</tr>
+	<tr>
+		<td>Company Email</td>
+		<td><input type="text" id="comp_email" name="comp_email" value="<%= comp_email %>" readonly></td>
+	
+	</tr>			
+	</table>
+	<br>
+	<input type="submit" name="delete" value="Delete" id="delete" onclick="alert('Successfully Delete company details!');">
+	</form>
+</center>
 
  
   <br>
@@ -151,13 +181,7 @@
       </div>
    </div>
 </div>
-</footer>	
-		
-       
-
-
- 
+</footer>
 
 </body>
-
 </html>

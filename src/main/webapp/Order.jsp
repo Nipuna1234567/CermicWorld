@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Supplier Management</title>
+<title>Add Supplier Order</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -49,28 +49,50 @@
 <br>
 <br>
 
+</head>
+<body>
 
-<center>
-<h2>Supplier Management</h2></center><br><br>
+<form name="myForm" action="OrderServelet" onsubmit="return validateForm()" method="post" >
+<h2> Add Supplier Order</h2></center><br><br>
 
            <div class="billformInner">
+           
+          <center>
+<table>
+
+   <tr>
+   <th><h3>Supplier Order ID</h3></th> <th><input type="text"  name="sup_oid" id="sup_oid" placeholder="Supplier Order ID" ><br><br></th></tr>
+   <tr>
+    <tr>
+   <th><h3>Quantity</h3></th> <th><input type="text"  name="qty" id="qty" placeholder="Quantity" ><br><br></th></tr>
+   <tr>
+   <th><h3>Date</h3></th> <th><input type="text"  name="date" id="date" placeholder="Date" ><br><br></th></tr>
+	<tr>		
+ 				
+    <th><h3>Company ID</h3></th> <th><input type="text"  name="comp_id" id="comp_id" placeholder="Company ID" ><br><br></th></tr>
+    
+  
+    <tr>
+   <th> <h3>Row Material ID</h3></th>  <th><input  type="text" name="mat_id" name="text" id="mat_id" placeholder="Row Material ID"><br><br></th></tr>
+   
+   
+     </table>
+     
+     </center>
+     
+     <br>
+     <br>
+     <br>
+    
+      <input type="submit" name="submit" value="Insert"  id="submit">
+      
+     <input type="reset" name="reset" value="Clear" id="reset">
+       
+    <br><br>
 
 
-<fieldset>
+	</form>
 
-<tr><th><center><a href="SupplierCompany.jsp"><input type="submit" name="submit" id="homeb" value="Add New Supplier Company " ></a><br></th></tr>
-<tr><th><center><a href="Order.jsp"><input type="submit" name="submit" id="homeb" value="Add Supplier Order "></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit" id="homeb" value=" View Company Details"></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit"  id="homeb" value="View Order Details "></a><br></th></tr>
-<tr><th><center><a href="#"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Order Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
-</div>
-
-	       
 
 
  
@@ -151,13 +173,7 @@
       </div>
    </div>
 </div>
-</footer>	
-		
-       
-
-
- 
+</footer>
 
 </body>
-
 </html>
