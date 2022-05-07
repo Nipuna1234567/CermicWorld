@@ -28,7 +28,7 @@ public class oAdminLoginServlet extends HttpServlet {
 			List<oadmin> adminDetails = oAdminDButil.getoadmin(user_name);
 			request.setAttribute("adminDetails", adminDetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("ProductManagementHome.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("SalesHome.jsp");
 			dis.forward(request, response);
 		} else {
 		
