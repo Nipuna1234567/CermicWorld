@@ -8,7 +8,7 @@ public class oadminConnection {
 	
 	private static String url="jdbc:mysql://localhost:3306/ceramicworld";
 	private static String user="root";
-	private static String password="Malshi1999";
+	private static String password="Nipuna1234";
 	private static Connection con;
 
 	public static Connection getConnection() {

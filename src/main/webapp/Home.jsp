@@ -68,7 +68,7 @@
 				<div class="intro-colom">
 					<div class="colom-part">
 						<div class="colom-img">
-							<a href="SupplierHome.jsp"><img src="web/images/supplier.png" width="80px" height="80px"></a>
+							<a href="sAdminLogin.jsp"><img src="web/images/supplier.png" width="80px" height="80px"></a>
 						</div>
 
 						<div>
@@ -93,10 +93,9 @@
 					<div class="colom-part">
 						<div class="colom-img">
 
-							<a href=""><img src="web/images/Sales.png" width="80px" height="80px"></a>
 
 
-							<a href="SalesHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
+							<a href="oAdminLogin.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
 
 
 						</div>
@@ -109,7 +108,7 @@
 
 					<div class="colom-part">
 						<div class="colom-img">
-							 <a href="TransportHome.jsp"><img src="web/images/Transport.png" width="80px" height="80px"></a>
+							 <a href="tAdminLogin.jsp"><img src="web/images/Transport.png" width="80px" height="80px"></a>
 						</div><!-- colom-img -->
 
 						<div>
