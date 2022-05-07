@@ -13,11 +13,15 @@
 	<script src="web/js/de.js"></script>
 	
 <!-- Footer-->	
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-<link rel="stylesheet" href="web/css/shopinsert.css">
+<link rel="stylesheet" href="web/css/Supplier.css">
+	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+	
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+
 	
 </head>
 <body>
@@ -33,7 +37,7 @@
 		
 			    <a href="Home.jsp">Home</a>
 				<a href="#">About</a>
-				<a href="SalesHome.jsp">Sales</a>
+				<a href="SalesHome.jsp">Supplier</a>
 				<a href="#">Contact</a>
 		</nav>
 		
@@ -50,75 +54,72 @@
 <br>
 <br>
 
+	
+	
+	<style type="text/css">
+		body{
+			font-family: Hind SemiBold;
+		}
+	
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 
-<center>
-	<div class="topic">
-<h1>Add Shops</h1>
-</div>
-<table class="center"><br>
-
-
-
-
-<br>
-<br>
+	<table>
+	<c:forEach var="co" items="${SupplierCompanyDetails}">
 	
-	<c:forEach var="sh" items="${shopDetails}">
-	
-	<c:set var="sh_id" value="${sh.sh_id}"/>
-	<c:set var="sh_name" value="${sh.sh_name}"/>
-	<c:set var="sh_phone" value="${sh.sh_phone}"/>
-	<c:set var="sh_address" value="${sh.sh_address}"/>
-	
+	<c:set var="comp_id" value="${co.comp_id}"/>
+	<c:set var="comp_name" value="${co.comp_name}"/>
+	<c:set var="comp_type" value="${co.comp_type}"/>
+	<c:set var="comp_phone" value="${co.comp_phone}"/>
+	<c:set var="comp_address" value="${co.comp_address}"/>
+	<c:set var="comp_email" value="${co.comp_email}"/>
 	
 	
 	<tr>
-		<td>S_id</td>
-		<td>${sh.sh_id}</td>
+		<td>comp_id</td>
+		<td>${co.comp_id}</td>
 	</tr>
 	<tr>
-		<td>Sh_Name</td>
-		<td>${sh.sh_name}</td>
+		<td>comp_name</td>
+		<td>${co.comp_name}</td>
 	</tr>
 	<tr>
-		<td>phoneNo</td>
-		<td>${sh.sh_phone}</td>
+		<td>comp_type</td>
+		<td>${co.comp_type}</td>
 	</tr>
 	<tr>
-		<td>Address</td>
-		<td>${sh.sh_address}</td>
+		<td>comp_phone</td>
+		<td>${co.comp_phone}</td>
 	</tr>
-	
-	
+	<tr>
+		<td>comp_address</td>
+		<td>${co.comp_address}</td>
+	</tr>
+	<tr>
+		<td>comp_email</td>
+		<td>${co.comp_email}</td>
+	</tr>
 
 
 	</c:forEach>
 	</table>
 	
-	<c:url value="shopupdate.jsp" var="shupdate">
-		<c:param name="sh_id" value="${sh_id}"/>
-		<c:param name="sh_name" value="${sh_name}"/>
-		<c:param name="sh_phone" value="${sh_phone}"/>
-		<c:param name="sh_address" value="${sh_address}"/>
-
-	</c:url>
-	
-	<a href="${shupdate}">
-	<input type="button" name="update"  id="update" value="Update">
-	</a>
-	
 	<br>
-	<c:url value="shopdelete.jsp" var="shdelete">
-		<c:param name="sh_id" value="${sh_id}" />
-		<c:param name="sh_name" value="${sh_name}" />
-		<c:param name="sh_phone" value="${sh_phone}" />
-		<c:param name="sh_address" value="${sh_address}" />
+	<c:url value="DeleteSupplierCompany.jsp" var="codelete">
+		<c:param name="comp_id" value="${comp_id}" />
+		<c:param name="comp_name" value="${comp_name}" />
+		<c:param name="comp_type" value="${comp_type}" />
+		<c:param name="comp_phone" value="${comp_phone}" />
+		<c:param name="comp_address" value="${comp_address}" />
+		<c:param name="comp_email" value="${comp_email}" />
 	
 	</c:url>
-	<a href="${shdelete}">
-	<input type="button" name="delete" id="delete" value="Delete">
+	<a href="${codelete}">
+	<input type="button" name="delete" value="Delete">
 	</a>
 	
 	 
@@ -200,7 +201,6 @@
    </div>
 </div>
 </footer>
-	
 	
 </body>
 </html>

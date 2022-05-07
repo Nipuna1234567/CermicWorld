@@ -90,7 +90,7 @@ public class ShopDBUtil {
 						
 						
 						
-						Shop sh=new Shop(sh_id,sh_name,sh_phone,sh_address);
+						Shop sh=new Shop(sh_id1,sh_name,sh_phone,sh_address);
 						Shop.add(sh);
 						
 					}

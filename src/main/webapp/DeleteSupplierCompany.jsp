@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Insert title here</title>
-	
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	
 	<script src="web/js/de.js"></script>
@@ -16,8 +15,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-<link rel="stylesheet" href="web/css/shopinsert.css">
+<link rel="stylesheet" href="web/css/Supplier.css">
+	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 	
 </head>
 <body>
@@ -33,7 +32,7 @@
 		
 			    <a href="Home.jsp">Home</a>
 				<a href="#">About</a>
-				<a href="SalesHome.jsp">Sales</a>
+				<a href="SalesHome.jsp">Supplier</a>
 				<a href="#">Contact</a>
 		</nav>
 		
@@ -54,74 +53,57 @@
 <body>
 
 <center>
-	<div class="topic">
-<h1>Add Shops</h1>
-</div>
-<table class="center"><br>
 
 
-
-
-<br>
-<br>
-	
-	<c:forEach var="sh" items="${shopDetails}">
-	
-	<c:set var="sh_id" value="${sh.sh_id}"/>
-	<c:set var="sh_name" value="${sh.sh_name}"/>
-	<c:set var="sh_phone" value="${sh.sh_phone}"/>
-	<c:set var="sh_address" value="${sh.sh_address}"/>
-	
+	<%
+	        
+			String comp_id = request.getParameter("comp_id");
+			String comp_name = request.getParameter("comp_name");
+			String comp_type = request.getParameter("comp_type");
+			String comp_phone= request.getParameter("comp_phone");
+			String comp_address= request.getParameter("comp_address");
+			String comp_email = request.getParameter("comp_email");
+			
+	%>
 	
 	
-	<tr>
-		<td>S_id</td>
-		<td>${sh.sh_id}</td>
+	<h1> Delete Supplier Company</h1>
+	
+	<form action="SupplierCompanyDeleteServlet" method="post">
+	<table>
+		
+		<tr>
+			<td>Company ID</td>
+			<td><input type="text" id="comp_id" name="comp_id" value="<%= comp_id %>" readonly></td>
+		</tr>
+		<tr>
+		<td>Company Name</td>
+		<td><input type="text" id="comp_name" name="comp_name" value="<%= comp_name %>"readonly ></td>
 	</tr>
 	<tr>
-		<td>Sh_Name</td>
-		<td>${sh.sh_name}</td>
+		<td>Company Type</td>
+		<td><input type="text" id="comp_type" name="comp_type" value="<%= comp_type %>" readonly></td>
 	</tr>
 	<tr>
-		<td>phoneNo</td>
-		<td>${sh.sh_phone}</td>
+		<td>Company Phone</td>
+		<td><input type="text" id="comp_phone" name="comp_phone" value="<%= comp_phone %>" readonly></td>
 	</tr>
 	<tr>
-		<td>Address</td>
-		<td>${sh.sh_address}</td>
+		<td>Company Address</td>
+		<td><input type="text" id="comp_address" name="comp_address" value="<%= comp_address %>" readonly></td>
 	</tr>
+	<tr>
+		<td>Company Email</td>
+		<td><input type="text" id="comp_email" name="comp_email" value="<%= comp_email %>" readonly></td>
 	
-	
-
-
-	</c:forEach>
+	</tr>			
 	</table>
-	
-	<c:url value="shopupdate.jsp" var="shupdate">
-		<c:param name="sh_id" value="${sh_id}"/>
-		<c:param name="sh_name" value="${sh_name}"/>
-		<c:param name="sh_phone" value="${sh_phone}"/>
-		<c:param name="sh_address" value="${sh_address}"/>
-
-	</c:url>
-	
-	<a href="${shupdate}">
-	<input type="button" name="update"  id="update" value="Update">
-	</a>
-	
 	<br>
-	<c:url value="shopdelete.jsp" var="shdelete">
-		<c:param name="sh_id" value="${sh_id}" />
-		<c:param name="sh_name" value="${sh_name}" />
-		<c:param name="sh_phone" value="${sh_phone}" />
-		<c:param name="sh_address" value="${sh_address}" />
-	
-	</c:url>
-	<a href="${shdelete}">
-	<input type="button" name="delete" id="delete" value="Delete">
-	</a>
-	
-	 
+	<input type="submit" name="delete" value="Delete" id="delete" onclick="alert('Successfully Delete company details!');">
+	</form>
+</center>
+
+ 
   <br>
   <br><br>
   <br>
@@ -200,7 +182,6 @@
    </div>
 </div>
 </footer>
-	
-	
+
 </body>
 </html>

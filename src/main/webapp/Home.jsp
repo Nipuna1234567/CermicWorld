@@ -68,7 +68,7 @@
 				<div class="intro-colom">
 					<div class="colom-part">
 						<div class="colom-img">
-							<a href="Floral.php"><img src="web/images/supplier.png" width="80px" height="80px"></a>
+							<a href="SupplierHome.jsp"><img src="web/images/supplier.png" width="80px" height="80px"></a>
 						</div>
 
 						<div>
@@ -92,7 +92,13 @@
 				<div class="intro-colom">
 					<div class="colom-part">
 						<div class="colom-img">
+
 							<a href=""><img src="web/images/Sales.png" width="80px" height="80px"></a>
+
+
+							<a href="SalesHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
+
+
 						</div>
 
 						<div>
@@ -107,7 +113,7 @@
 						</div><!-- colom-img -->
 
 						<div>
-							<h3>&nbsp &nbsp &nbsp &nbsp &nbsp &nbspTransport management </h3>
+							<h3>&nbsp &nbsp Transport management </h3>
               				<p>&nbsp  &nbsp &nbsp &nbsp &nbsp This process is keeping track of sell orders .</p>
 						</div>
 					</div><!-- colom-part -->			
@@ -162,7 +168,7 @@ function carousel() {
             <div class="col-md-6 ">
                <div class="logo-part">
                   <img src="web/images/lo.png"  width="350px" height="180px"  align="right" >
-                  <p>Ceramic World© (pvt).Ltd Company</p>
+                  <p>Ceramic WorldÂ© (pvt).Ltd Company</p>
                   
                   
                </div>
@@ -195,9 +201,9 @@ function carousel() {
                   
                      <ul>
                         <li> <a href="Home.jsp"> Home</a> </li>
-                        <li> <a href="#"> Supplier</a> </li>
+                        <li> <a href="SupplierHome.jsp"> Supplier</a> </li>
                         <li> <a href="ProductManagementHome.jsp"> Product</a> </li>
-                        <li> <a href="#"> Sales</a> </li>
+                        <li> <a href="SalesHome.jsp"> Sales</a> </li>
                         <li> <a href="TransportHome.jsp"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>

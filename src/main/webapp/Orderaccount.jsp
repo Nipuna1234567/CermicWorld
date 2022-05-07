@@ -16,8 +16,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-<link rel="stylesheet" href="web/css/shopinsert.css">
+<link rel="stylesheet" href="web/css/Supplier.css">
+	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 	
 </head>
 <body>
@@ -33,7 +33,7 @@
 		
 			    <a href="Home.jsp">Home</a>
 				<a href="#">About</a>
-				<a href="SalesHome.jsp">Sales</a>
+				<a href="SalesHome.jsp">Supplier</a>
 				<a href="#">Contact</a>
 		</nav>
 		
@@ -49,46 +49,64 @@
 <br>
 <br>
 <br>
+	
+	<style type="text/css">
+		body{
+			font-family: Hind SemiBold;
+		}
+	
+		table, th, td {
+  			border: 1px solid black;
+		}
+	</style>
 
 </head>
 <body>
 
 <center>
 	<div class="topic">
-<h1>Add Shops</h1>
+<h1>Add Supplier Orders</h1>
 </div>
-<table class="center"><br>
+
 
 
 
 
 <br>
 <br>
+
+<center>
+<Table>
 	
-	<c:forEach var="sh" items="${shopDetails}">
+	<c:forEach var="orderdetails" items="${orderdetails}">
 	
-	<c:set var="sh_id" value="${sh.sh_id}"/>
-	<c:set var="sh_name" value="${sh.sh_name}"/>
-	<c:set var="sh_phone" value="${sh.sh_phone}"/>
-	<c:set var="sh_address" value="${sh.sh_address}"/>
+	<c:set var="sup_oid" value="${orderdetails.sup_oid}"/>
+	<c:set var="qty" value="${orderdetails.qty}"/>
+	<c:set var="date" value="${orderdetails.date}"/>
+	<c:set var="comp_id" value="${orderdetails.comp_id}"/>
+	<c:set var="mat_id" value="${orderdetails.mat_id}"/>
 	
 	
 	
 	<tr>
-		<td>S_id</td>
-		<td>${sh.sh_id}</td>
+		<td>sup_oid</td>
+		<td>${orderdetails.sup_oid}</td>
 	</tr>
 	<tr>
-		<td>Sh_Name</td>
-		<td>${sh.sh_name}</td>
+		<td>qty</td>
+		<td>${orderdetails.qty}</td>
 	</tr>
 	<tr>
-		<td>phoneNo</td>
-		<td>${sh.sh_phone}</td>
+		<td>date</td>
+		<td>${orderdetails.date}</td>
 	</tr>
 	<tr>
-		<td>Address</td>
-		<td>${sh.sh_address}</td>
+		<td>comp_id</td>
+		<td>${orderdetails.comp_id}</td>
+	</tr>
+	<tr>
+		<td>mat_id</td>
+		<td>${orderdetails.mat_id}</td>
 	</tr>
 	
 	
@@ -96,32 +114,10 @@
 
 	</c:forEach>
 	</table>
+	</center>
 	
-	<c:url value="shopupdate.jsp" var="shupdate">
-		<c:param name="sh_id" value="${sh_id}"/>
-		<c:param name="sh_name" value="${sh_name}"/>
-		<c:param name="sh_phone" value="${sh_phone}"/>
-		<c:param name="sh_address" value="${sh_address}"/>
-
-	</c:url>
 	
-	<a href="${shupdate}">
-	<input type="button" name="update"  id="update" value="Update">
-	</a>
-	
-	<br>
-	<c:url value="shopdelete.jsp" var="shdelete">
-		<c:param name="sh_id" value="${sh_id}" />
-		<c:param name="sh_name" value="${sh_name}" />
-		<c:param name="sh_phone" value="${sh_phone}" />
-		<c:param name="sh_address" value="${sh_address}" />
-	
-	</c:url>
-	<a href="${shdelete}">
-	<input type="button" name="delete" id="delete" value="Delete">
-	</a>
-	
-	 
+ 
   <br>
   <br><br>
   <br>
@@ -200,6 +196,7 @@
    </div>
 </div>
 </footer>
+	
 	
 	
 </body>

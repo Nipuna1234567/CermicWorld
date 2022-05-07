@@ -40,7 +40,7 @@ public class VehicleRegistrationservlet extends HttpServlet {
 			List<Vehicle>vehicledetails=vehicleDButil.getVehicledetails(vehi_no);
 			request.setAttribute("vehicledetails", vehicledetails);
 			
-			RequestDispatcher dis=request.getRequestDispatcher("Sucsess.jsp");
+			RequestDispatcher dis=request.getRequestDispatcher("TransportHome.jsp");
 			dis.forward(request, response);
 	}
 	else {

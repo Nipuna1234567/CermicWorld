@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Insert title here</title>
-	
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="ISO-8859-1">
+<title>Sales Management</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	
 	<script src="web/js/de.js"></script>
@@ -16,8 +15,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-<link rel="stylesheet" href="web/css/shopinsert.css">
+	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+	
+	<link rel="stylesheet" href="web/css/shopinsert.css">
 	
 </head>
 <body>
@@ -50,78 +50,33 @@
 <br>
 <br>
 
-</head>
-<body>
 
 <center>
-	<div class="topic">
-<h1>Add Shops</h1>
+<h2>Sales Management</h2></center><br><br>
+
+           <div class="billformInner">
+
+
+<fieldset>
+
+<tr><th><center><a href="ShopInsert.jsp"><input type="submit" name="submit" id="homeb" value="Add New Shops " ></a><br></th></tr>
+<tr><th><center><a href="ShopdetailsView.jsp"><input type="submit" name="submit" id="homeb" value="View Shop Details "></a><br></th></tr>
+<tr><th><center><a href="OrderInsert.jsp"><input type="submit" name="submit" id="homeb" value=" Add Shops Order"></a><br></th></tr>
+<tr><th><center><a href="OrderdetailsView.jsp"><input type="submit" name="submit"  id="homeb" value="View Shops Order Details "></a><br></th></tr>
+<tr><th><center><a href="OrderReport.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Accounting Report</button></a><br><br><br></th></tr>
+
+
+
+</fieldset>
 </div>
-<table class="center"><br>
+</div>
+
+		
+		
+       
 
 
-
-
-<br>
-<br>
-	
-	<c:forEach var="sh" items="${shopDetails}">
-	
-	<c:set var="sh_id" value="${sh.sh_id}"/>
-	<c:set var="sh_name" value="${sh.sh_name}"/>
-	<c:set var="sh_phone" value="${sh.sh_phone}"/>
-	<c:set var="sh_address" value="${sh.sh_address}"/>
-	
-	
-	
-	<tr>
-		<td>S_id</td>
-		<td>${sh.sh_id}</td>
-	</tr>
-	<tr>
-		<td>Sh_Name</td>
-		<td>${sh.sh_name}</td>
-	</tr>
-	<tr>
-		<td>phoneNo</td>
-		<td>${sh.sh_phone}</td>
-	</tr>
-	<tr>
-		<td>Address</td>
-		<td>${sh.sh_address}</td>
-	</tr>
-	
-	
-
-
-	</c:forEach>
-	</table>
-	
-	<c:url value="shopupdate.jsp" var="shupdate">
-		<c:param name="sh_id" value="${sh_id}"/>
-		<c:param name="sh_name" value="${sh_name}"/>
-		<c:param name="sh_phone" value="${sh_phone}"/>
-		<c:param name="sh_address" value="${sh_address}"/>
-
-	</c:url>
-	
-	<a href="${shupdate}">
-	<input type="button" name="update"  id="update" value="Update">
-	</a>
-	
-	<br>
-	<c:url value="shopdelete.jsp" var="shdelete">
-		<c:param name="sh_id" value="${sh_id}" />
-		<c:param name="sh_name" value="${sh_name}" />
-		<c:param name="sh_phone" value="${sh_phone}" />
-		<c:param name="sh_address" value="${sh_address}" />
-	
-	</c:url>
-	<a href="${shdelete}">
-	<input type="button" name="delete" id="delete" value="Delete">
-	</a>
-	
-	 
+ 
   <br>
   <br><br>
   <br>
@@ -200,7 +155,6 @@
    </div>
 </div>
 </footer>
-	
-	
 </body>
+
 </html>

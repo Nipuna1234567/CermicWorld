@@ -1,7 +1,8 @@
-package com.shop;
+package com.Supplier;
 
 import java.io.IOException;
 import java.util.List;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,26 +11,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/ShopDeleteServlet")
-public class ShopDeleteServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
 
+@WebServlet("/SupplierCompanyDeleteServlet")
+public class SupplierCompanyDeleteServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-		String sh_id= request.getParameter("sh_id");
+		String comp_id= request.getParameter("comp_id");
 
 		boolean istrue;
 
-		istrue=ShopDBUtil.Delete(sh_id);
+		istrue=SupplierCompanyDBUtil.Delete(comp_id);
 		if(istrue==true)
 		{
 
 
 
-		List<Shop>Shopdetails=ShopDBUtil.getshopdetails(sh_id);
-		request.setAttribute("ShopDetails", Shopdetails);
-		RequestDispatcher dis=request.getRequestDispatcher("ShopdetailsView.jsp");
+		List<SupplierCompany>suppliercompanydetails=SupplierCompanyDBUtil.getsuppliercompanydetails(comp_id);
+		request.setAttribute("suppliercompanyDetails", suppliercompanydetails);
+		RequestDispatcher dis=request.getRequestDispatcher("SupplierCompany.jsp");
 		dis.forward(request,response);
 		}
 		else
