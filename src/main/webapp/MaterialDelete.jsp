@@ -81,17 +81,28 @@ ResultSet rs=st.executeQuery(sql);
     <tr>
     <th><h3>Material Type</h3></th> <th><select name="mat_type" id="mat_type">
 				<option  value="<%=rs.getString(2)%>" ><%=rs.getString(2)%>  </option>
+ 				 
+ 				 <option value="***********">***********</option>
  				 <option value="Ball Clays">Ball Clays</option>
   				 <option value="Bentonites">Bentonites</option>
                  <option value="Fireclays">Fireclays</option>
+                  <option value="Kaolins">Kaolins</option>
                  
                 </select> <br><br></th></tr>
      <tr>
       <tr>
     <th><h3>Material Name</h3></th> <th><select name="mat_name" id="mat_name">
 				<option  value="<%=rs.getString(3)%>" ><%=rs.getString(3)%>  </option>
- 				 <option value="Ball Clay-Bell Dark">Ball Clay-Bell Dark</option>
-  				 <option value="Ball Clay-Foundry Hill Cream">Ball Clay-Foundry Hill Cream</option>
+				
+ 				 <option value="***********">***********</option>
+			<option value="Ball Clay-Bell Dark">Ball Clay-Bell Dark</option>
+  				 <option value="Ball Clay-Foundry Cream">Ball Clay-Foundry Cream</option>
+  				  <option value="Bentonites-325 mesh">Bentonites-325 mesh</option>
+  				 <option value="Bentonites-HPM-20">Bentonites-HPM-20</option>
+  				 <option value="Fireclay-IMCO-400">Fireclay-IMCO-400</option>
+  				 <option value="Fireclay-Bond-40">Fireclay-Bond-40</option>
+                  <option value="Kaolins-6">Kaolins-6</option>
+  				 <option value="Kaolins-Helmer">Kaolins-Helmer</option>
                  
                
                  </select> <br><br></th></tr>
@@ -99,12 +110,10 @@ ResultSet rs=st.executeQuery(sql);
                            <tr>
     <th><h3>Material Use For</h3></th> <th><select name="mat_use" id="mat_use">
     
-				<option  value="<%=rs.getString(4)%>" ><%=rs.getString(4)%>  </option>		
- 				 <option value="Ceramic Plate">Ceramic Plate</option>
-  				 <option value="Ceramic Mug">Ceramic Mug</option>
-  				  <option value="Ceramic Cup">Ceramic Cup</option>
-  				 <option value="Ceramic printed Plate">Ceramic printed Plate</option>
-  				 <option value="Ceramic printed Cup">Ceramic printed Cup</option>
+				 <option value="Porcelain">Porcelain</option>
+  				 <option value="Stoneware">Stoneware</option>
+  				  <option value="Earthenware">Earthenware</option>
+  				 <option value="Bone China">Bone China</option>
   				 
                   </select> <br><br></th></tr>
                  

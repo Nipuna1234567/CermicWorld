@@ -70,7 +70,7 @@
 <tr><center> <a href="StockSearch.jsp"><input type="submit" name="submit" value="Product Store " id="homeb"></a><br></tr>
 <tr><center> <a href="stockDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Report</button> </a><br><br><br></tr>
 </fieldset>
-
+</form>
 </div>
 </div>
 

@@ -79,7 +79,7 @@
 
 					<div class="colom-part">
 						<div class="colom-img">
-							 <a href="ProductManagementHome.jsp"><img src="web/images/Product.png" width="80px" height="80px"></a>
+							 <a href="pAdminlogin.jsp"><img src="web/images/Product.png" width="80px" height="80px"></a>
 						</div><!-- colom-img -->
 
 						<div>
@@ -92,6 +92,9 @@
 				<div class="intro-colom">
 					<div class="colom-part">
 						<div class="colom-img">
+
+							<a href=""><img src="web/images/Sales.png" width="80px" height="80px"></a>
+
 
 							<a href="SalesHome.jsp"><img src="web/images/Sales.png" width="80px" height="80px"></a>
 

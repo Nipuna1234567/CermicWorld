@@ -145,7 +145,8 @@ return false;
    <th><h3>Material No</h3></th> <th><input type="text"  name="mat_id" id="mat_id" placeholder="M001" required ><br><br></th></tr>
     <tr>
     <th><h3>Material Type</h3></th> <th><select name="mat_type" id="mat_type" required>
-			<option value="***********">***********</option>
+    
+			
  				 <option value="Ball Clays">Ball Clays</option>
   				 <option value="Bentonites">Bentonites</option>
                  <option value="Fireclays">Fireclays</option>
@@ -156,7 +157,7 @@ return false;
       <tr>
     <th><h3>Material Name</h3></th> <th><select name="mat_name" id="mat_name" onchange="return valid()" required>
     
-   <option value="***********">***********</option>
+
 			<option value="Ball Clay-Bell Dark">Ball Clay-Bell Dark</option>
   				 <option value="Ball Clay-Foundry Cream">Ball Clay-Foundry Cream</option>
   				  <option value="Bentonites-325 mesh">Bentonites-325 mesh</option>
