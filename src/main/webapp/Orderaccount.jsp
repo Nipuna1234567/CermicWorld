@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" href="web/css/Supplier.css">
+<link rel="stylesheet" href="web/css/Order.css">
 	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 	
 </head>
@@ -33,7 +33,7 @@
 		
 			    <a href="Home.jsp">Home</a>
 				<a href="#">About</a>
-				<a href="SalesHome.jsp">Supplier</a>
+				<a href="SupplierHome.jsp">Supplier</a>
 				<a href="#">Contact</a>
 		</nav>
 		

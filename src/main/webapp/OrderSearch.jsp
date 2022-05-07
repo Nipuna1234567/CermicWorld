@@ -4,22 +4,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Add Supplier Order</title>
-
+<title>Supplier Order Search</title>
+<link rel="stylesheet" href="web/css/deliver.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/Order.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -29,11 +29,10 @@
     <div class="content">
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
-		
-			    <a href="Home.jsp">Home</a>
-				<a href="#">About</a>
+		 		<a href="Home.jsp">Home</a>
 				<a href="SupplierHome.jsp">Supplier</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -48,64 +47,46 @@
 <br>
 <br>
 <br>
-
-</head>
-<body>
-
-<form name="myForm" action="OrderServelet" onsubmit="return validateForm()" method="post" >
-<h2> Add Supplier Order</h2></center><br><br>
-
-           <div class="billformInner">
-           
-          <center>
-<table>
-
-   <tr>
-   <th><h3>Supplier Order ID</h3></th> <th><input type="text"  name="sup_oid" id="sup_oid" placeholder="Supplier Order ID" ><br><br></th></tr>
-   <tr>
-    <tr>
-   <th><h3>Quantity</h3></th> <th><input type="text"  name="qty" id="qty" placeholder="Quantity" ><br><br></th></tr>
-   <tr>
-   <th><h3>Date</h3></th> <th><input type="text"  name="date" id="date" placeholder="Date" ><br><br></th></tr>
-	<tr>		
- 				
-    <th><h3>Company ID</h3></th> <th><input type="text"  name="comp_id" id="comp_id" placeholder="Company ID" ><br><br></th></tr>
-    
-  
-    <tr>
-   <th> <h3>Row Material ID</h3></th>  <th><input  type="text" name="mat_id" name="text" id="mat_id" placeholder="Row Material ID"><br><br></th></tr>
-   
-   
-     </table>
-     
-     </center>
-     
-     <br>
-     <br>
-     <br>
-    
-      <input type="submit" name="submit" value="Insert"  id="submit">
-      
-     <input type="reset" name="reset" value="Clear" id="reset">
-       
-    <br><br>
+<br>
+<br>
+<h2>Search Supplier Order</h2><br><br>	
+		
 
 
-	</form>
+<form action="OrderSearchServlet" method="post">
 
+<lable>Supplier Order ID:</lable>
 
+<a href="#">
+<input type="text" name="sup_oid" title="Enter  Supplier Order ID" required  ><br><br><br>
+</a>
+<a href="${update}">
 
  
+ <button type="submit"  name="submit"  id="search" ><i class="fa fa-search"></i> Search</button>
+</a>
+
+</form>
+   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -135,7 +116,7 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -147,11 +128,11 @@
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
-                        <li> <a href="#"> Product</a> </li>
+                        <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
                         <li> <a href="#"> Sales</a> </li>
-                        <li> <a href="#"> Transport </a> </li>
+                        <li> <a href="TransportHome.jsp"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>
                   </div>
@@ -174,6 +155,7 @@
    </div>
 </div>
 </footer>
+
 
 </body>
 </html>
