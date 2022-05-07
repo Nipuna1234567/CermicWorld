@@ -146,7 +146,7 @@
 
 <a href="${delete}">
 
-<button type="submit"  name="delete"  id="delete" ><i class="fa fa-trash-alt"></i> &nbsp Delete</button>
+<button type="submit"  name="delete"  id="delete" ><i class="fa fa-trash"></i> &nbsp Delete</button>
 
 </a>
   <br>
