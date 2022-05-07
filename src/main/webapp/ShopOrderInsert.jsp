@@ -1,27 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-      <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Update Shops</title>
+<title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 <link rel="stylesheet" href="web/css/shopinsert.css">
+
+<script src="web/js/de.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Dates in other months</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
 
 </head>
 <body>
-
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -33,9 +45,9 @@
 </div>
 		
 			    <a href="Home.jsp">Home</a>
+				<a href="#">About</a>
 				<a href="SalesHome.jsp">Sales</a>
 				<a href="#">Contact</a>
-				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -51,66 +63,59 @@
 <br>
 <br>
 
+<form name="myForm" action="ShopOrderInsertServlet" onsubmit="return validateForm()" method="post" >
 
-
-
-
-<form name="myForm" action="ShopUpdateServlet" onsubmit="return validateForm()" method="post" >
-
-<%
-
-
- Class.forName("com.mysql.jdbc.Driver").newInstance();
-Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","Nipuna1234");
-String sh_id=request.getParameter("sh_id");
-
-String sql="Select * from add_shop where sh_id='"+sh_id+"'" ;
-Statement st=conn.createStatement();
-ResultSet rs=st.executeQuery(sql);
-
- while(rs.next()){
-%>
-
-<h1>Update Shops</h1>	
+ 
 <center>
-<table>
 
+ <h2>Add Shop Order</h2></center><br><br>
 
-                 
-    <tr>
-   <th><h3>Shop ID</h3></th> <th><input type="text"  name="sh_id" id="sh_id" placeholder="ID"  value="<%=rs.getString(1)%>" readonly><br><br></th></tr>
-    
-  
-    <tr>
-   <th> <h3>Shop Name</h3></th>  <th><input  type="text" name="sh_name" name="text" id="sh_name" placeholder="Shop Name"  value="<%=rs.getString(2)%>" ><br><br></th></tr>
-   
+ 
+
+           <div class="billformInner">
+<center><table>
+
+ 
+
    <tr>
-   <th> <h3>Shop Phone</h3></th>  <th><input  type="text" name="sh_phone" name="text" id="sh_phone" placeholder="Phone No"  value="<%=rs.getString(3)%>" ><br><br></th></tr>
-   
-     <tr>
-   <th> <h3>Shop Address</h3></th>  <th><input  type="text" name="sh_address" name="text" id="sh_address" placeholder="Address"  value="<%=rs.getString(4)%>" ><br><br></th></tr>
-   
-   
-                  <% 
- }
- %>
-    
-    </table>
-   
-    <input type="submit" name="submit" value="Update" id="update" onclick="alert( 'Are sure you want to update shop details?');">
-    <br><br>
-
-
-	</form>
+   <th><h3>Shop Order ID</h3></th> <th><input type="text"  name="shop_order" id="shop_order"  title="Enter Shop Order ID" placeholder="ID" ><br><br></th></tr>
+   <tr>
+   <th> <h3>Shop Name</h3></th>  <th><input  type="text" name="shop_name" name="text" id="shop_name" placeholder="Shop Name"  required><br><br></th></tr>
+   <tr>
+     <th> <h3>Shop No</h3></th>  <th><input  type="text" name="shop_no" name="text" id="shop_no" placeholder="Shop No" required><br><br></th></tr>
+   <tr>
+     <th> <h3>Address</h3></th>  <th><input  type="text" name="shop_address" name="text" id="shop_address"  placeholder="Address" required><br><br></th></tr>
+   <tr>
+     <th> <h3>Quantity</h3></th>  <th><input  type="text" name="qty" name="text" id="qty"  placeholder="Quantity" required><br><br></th></tr>
+   <tr>
+     <th> <h3>Unit Price</h3></th>  <th><input  type="text" name="unite_price" name="text" id="unite_price"  placeholder="Unite Price" required><br><br></th></tr>
+   <tr>
+     <th> <h3>Date</h3></th>  <th><input  type="text" name="date" name="text" id="datepicker"  placeholder="MM-DD-YYYY" required><br><br></th></tr>
+   <tr>
+    <th><h3>Shop ID</h3></th> <th><input type="text"  name="sh_id"  id="sh_id" placeholder="Shop ID" required><br><br></th></tr>  
+   <tr>
+     <th> <h3>Product ID</h3></th>  <th><input  type="text" name="p_id" name="text" id="p_id"  placeholder="Product ID" required><br><br></th></tr>
+     </table>
      
-    	   <br>
+     </div>
+
+ 
+
+
+<br><br> 
+
+ <center>
+
+   
+    <input type="submit" name="submit" value="Save"  id="submit" onclick="alert('You want to save the shop??');">
+    <input type="reset" name="reset" value="Clear" id="reset" onclick="alert('You want to clear the details??');">
+    <br><br>
+    </form>
+    
+    <center>
+
+    <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><br>				
   <br>
   <br>
   <br>
@@ -152,7 +157,7 @@ ResultSet rs=st.executeQuery(sql);
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <li> <a href="#"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -164,10 +169,10 @@ ResultSet rs=st.executeQuery(sql);
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <li> <a href="#"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
                         <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
-                        <li> <a href="#"> Sales</a> </li>
+                        <li> <a href="SalesHome.jsp"> Sales</a> </li>
                         <li> <a href="TransportHome.jsp"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>
@@ -190,11 +195,7 @@ ResultSet rs=st.executeQuery(sql);
       </div>
    </div>
 </div>
-</footer>   
-    
+</footer>
 
-
-	
-	
 </body>
 </html>

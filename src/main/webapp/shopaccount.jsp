@@ -75,7 +75,7 @@
 	
 	
 	<tr>
-		<td>S_id</td>
+		<td>Sh_id</td>
 		<td>${sh.sh_id}</td>
 	</tr>
 	<tr>
@@ -106,7 +106,7 @@
 	</c:url>
 	
 	<a href="${shupdate}">
-	<input type="button" name="update"  id="update" value="Update">
+	
 	</a>
 	
 	<br>
@@ -118,7 +118,7 @@
 	
 	</c:url>
 	<a href="${shdelete}">
-	<input type="button" name="delete" id="delete" value="Delete">
+	
 	</a>
 	
 	 

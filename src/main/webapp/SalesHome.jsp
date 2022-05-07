@@ -61,9 +61,10 @@
 
 <tr><th><center><a href="ShopInsert.jsp"><input type="submit" name="submit" id="homeb" value="Add New Shops " ></a><br></th></tr>
 <tr><th><center><a href="ShopdetailsView.jsp"><input type="submit" name="submit" id="homeb" value="View Shop Details "></a><br></th></tr>
-<tr><th><center><a href="OrderInsert.jsp"><input type="submit" name="submit" id="homeb" value=" Add Shops Order"></a><br></th></tr>
+<tr><th><center><a href="ShopOrderInsert.jsp"><input type="submit" name="submit" id="homeb" value=" Add Shops Order"></a><br></th></tr>
+<tr><th><center><a href="ShopOrderSearch.jsp"><input type="submit" name="submit"  id="homeb" value="Search Shop Order Details "></a><br></th></tr>
 <tr><th><center><a href="OrderdetailsView.jsp"><input type="submit" name="submit"  id="homeb" value="View Shops Order Details "></a><br></th></tr>
-<tr><th><center><a href="OrderReport.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Accounting Report</button></a><br><br><br></th></tr>
+<tr><th><center><a href="OrderReport.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Shop Order Report</button></a><br><br><br></th></tr>
 
 
 

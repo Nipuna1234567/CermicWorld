@@ -54,6 +54,9 @@
 <br>
 
 <center>
+<h2>View Shop List</h2></center>
+
+<center>
 
 <table class="center"><br>
 
@@ -92,7 +95,7 @@ while(rs.next()){
 
 
 
-<td><a href='shopupdate.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="deliver2">Update</a></td>
+<td><a href='shopupdate.jsp?sh_id=<%=rs.getString(1) %>'  class="update" id="deliver2">Update</a></td>
 <td><a href='shopdelete.jsp?sh_id=<%=rs.getString(1) %>' class="update" id="delete2">Delete</a></td>
 
 </tr>

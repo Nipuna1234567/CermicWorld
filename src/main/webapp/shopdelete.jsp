@@ -1,12 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-
+    pageEncoding="ISO-8859-1"%>
+      <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Shop Delete</title>
-
+<title>Delete Shops</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -19,9 +18,10 @@ pageEncoding="ISO-8859-1"%>
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 <link rel="stylesheet" href="web/css/shopinsert.css">
-	
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -33,9 +33,9 @@ pageEncoding="ISO-8859-1"%>
 </div>
 		
 			    <a href="Home.jsp">Home</a>
-				<a href="#">About</a>
 				<a href="SalesHome.jsp">Sales</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -55,57 +55,74 @@ pageEncoding="ISO-8859-1"%>
 
 
 
-<center>
-<br>
-<br>
-<br>
-
-
-<%
-String sh_id= request.getParameter("sh_id");
-String sh_name=request.getParameter("sh_name");
-String sh_phone=request.getParameter("sh_phone");
-String sh_address=request.getParameter("sh_address");
-
-
-
-%>
 <form name="myForm" action="ShopDeleteServlet" onsubmit="return validateForm()" method="post" >
 
+<%
 
 
-<div class="topic">
-<h1><center>Delete Shops</h1>
-</div>
+ Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","Nipuna1234");
+String sh_id=request.getParameter("sh_id");
 
+String sql="Select * from add_shop where sh_id='"+sh_id+"'" ;
+Statement st=conn.createStatement();
+ResultSet rs=st.executeQuery(sql);
 
+ while(rs.next()){
+%>
 
+<h1>Delete Shop</h1>	
+<center>
 <table>
-<tr>
-<th><h3>Shop ID</h3></th> <th><input type="text" name="sh_id" id="sh_id" placeholder="ID" value="<%=sh_id %>" readonly><br><br></th></tr>
-<tr>
-<tr>
-<th> <h3>Shop Name</h3></th> <th><input type="text" name="sh_name" name="text" id="sh_name" placeholder="Shop Name" value="<%=sh_name %>"readonly><br><br></th></tr>
-<tr>
-<th> <h3>Shop Phone</h3></th> <th><input type="text" name="sh_phone" name="text" id="sh_phone" placeholder="Phone No" value="<%=sh_phone %>"readonly><br><br></th></tr>
-<tr>
-<th> <h3>Shop Address</h3></th> <th><input type="text" name="sh_address" name="text" id="sh_address" placeholder="Address" value="<%=sh_address %>"readonly><br><br></th></tr>
-<tr>
-</table>
 
-<input type="submit" name="delete" value="Delete" id="delete" onclick="alert('Are you sure about delete this shop?');">
-<br><br>
 
- <br>
+                 
+    <tr>
+   <th><h3>Shop ID</h3></th> <th><input type="text"  name="sh_id" id="sh_id" placeholder="ID"  value="<%=rs.getString(1)%>" readonly><br><br></th></tr>
+    
+  
+    <tr>
+   <th> <h3>Shop Name</h3></th>  <th><input  type="text" name="sh_name" name="text" id="sh_name" placeholder="Shop Name"  value="<%=rs.getString(2)%>" readonly><br><br></th></tr>
+   
+   <tr>
+   <th> <h3>Shop Phone</h3></th>  <th><input  type="text" name="sh_phone" name="text" id="sh_phone" placeholder="Phone No"  value="<%=rs.getString(3)%>" readonly><br><br></th></tr>
+   
+     <tr>
+   <th> <h3>Shop Address</h3></th>  <th><input  type="text" name="sh_address" name="text" id="sh_address" placeholder="Address"  value="<%=rs.getString(4)%>" readonly><br><br></th></tr>
+   
+   
+                  <% 
+ }
+ %>
+    
+    </table>
+   
+    <input type="submit" name="delete" value="Delete" id="delete" onclick="alert('Are sure you want to delete shop details?');">
+    <br><br>
+
+
+	</form>
+     
+    	   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -135,7 +152,7 @@ String sh_address=request.getParameter("sh_address");
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -147,11 +164,11 @@ String sh_address=request.getParameter("sh_address");
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
-                        <li> <a href="#"> Product</a> </li>
+                        <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
                         <li> <a href="#"> Sales</a> </li>
-                        <li> <a href="#"> Transport </a> </li>
+                        <li> <a href="TransportHome.jsp"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>
                   </div>
@@ -173,7 +190,11 @@ String sh_address=request.getParameter("sh_address");
       </div>
    </div>
 </div>
-</footer>
-</body>
+</footer>   
+    
 
+
+	
+	
+</body>
 </html>
