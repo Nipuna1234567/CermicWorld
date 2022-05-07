@@ -60,8 +60,8 @@
 
 <tr><th><center><a href="SupplierCompany.jsp"><input type="submit" name="submit" id="homeb" value="Add New Supplier Company " ></a><br></th></tr>
 <tr><th><center><a href="Order.jsp"><input type="submit" name="submit" id="homeb" value="Add Supplier Order "></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit" id="homeb" value=" View Company Details"></a><br></th></tr>
-<tr><th><center><a href="#"><input type="submit" name="submit"  id="homeb" value="View Order Details "></a><br></th></tr>
+<tr><th><center><a href="OrderdetailsView.jsp"><input type="submit" name="submit" id="homeb" value=" View Order Details "></a><br></th></tr>
+<tr><th><center><a href="OrderSearch.jsp"><input type="submit" name="submit"  id="homeb" value="Search Supplier Order"></a><br></th></tr>
 <tr><th><center><a href="#"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Order Report</button></a><br><br><br></th></tr>
 
 
