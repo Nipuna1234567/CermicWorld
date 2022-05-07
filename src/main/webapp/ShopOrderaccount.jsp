@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-      <%@page import="java.sql.*" %>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Update Shops</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+	
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 	
 	<script src="web/js/de.js"></script>
@@ -18,10 +18,9 @@
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
 <link rel="stylesheet" href="web/css/shopinsert.css">
-
+	
 </head>
 <body>
-
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -33,9 +32,9 @@
 </div>
 		
 			    <a href="Home.jsp">Home</a>
+				<a href="#">About</a>
 				<a href="SalesHome.jsp">Sales</a>
 				<a href="#">Contact</a>
-				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -51,78 +50,94 @@
 <br>
 <br>
 
+</head>
+<body>
 
-
-
-
-<form name="myForm" action="ShopUpdateServlet" onsubmit="return validateForm()" method="post" >
-
-<%
-
-
- Class.forName("com.mysql.jdbc.Driver").newInstance();
-Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","Nipuna1234");
-String sh_id=request.getParameter("sh_id");
-
-String sql="Select * from add_shop where sh_id='"+sh_id+"'" ;
-Statement st=conn.createStatement();
-ResultSet rs=st.executeQuery(sql);
-
- while(rs.next()){
-%>
-
-<h1>Update Shops</h1>	
 <center>
-<table>
+	<div class="topic">
+<h1>Add Shop Order</h1>
+</div>
+<table class="center"><br>
 
 
-                 
-    <tr>
-   <th><h3>Shop ID</h3></th> <th><input type="text"  name="sh_id" id="sh_id" placeholder="ID"  value="<%=rs.getString(1)%>" readonly><br><br></th></tr>
-    
-  
-    <tr>
-   <th> <h3>Shop Name</h3></th>  <th><input  type="text" name="sh_name" name="text" id="sh_name" placeholder="Shop Name"  value="<%=rs.getString(2)%>" ><br><br></th></tr>
-   
-   <tr>
-   <th> <h3>Shop Phone</h3></th>  <th><input  type="text" name="sh_phone" name="text" id="sh_phone" placeholder="Phone No"  value="<%=rs.getString(3)%>" ><br><br></th></tr>
-   
-     <tr>
-   <th> <h3>Shop Address</h3></th>  <th><input  type="text" name="sh_address" name="text" id="sh_address" placeholder="Address"  value="<%=rs.getString(4)%>" ><br><br></th></tr>
-   
-   
-                  <% 
- }
- %>
-    
-    </table>
-   
-    <input type="submit" name="submit" value="Update" id="update" onclick="alert( 'Are sure you want to update shop details?');">
-    <br><br>
 
 
-	</form>
-     
-    	   <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br><br>				
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+<br>
+<br>
+	
+	<c:forEach var="so" items="${shopDetails}">
+	
+	<c:set var="shop_order" value="${so.shop_order}"/>
+	<c:set var="shop_name" value="${so.shop_name}"/>
+	<c:set var="shop_no" value="${so.shop_no}"/>
+	<c:set var="shop_address" value="${so.shop_address}"/>
+	<c:set var="qty" value="${so.qty}"/>
+	<c:set var="unite_price" value="${so.unite_price}"/>
+	<c:set var="date" value="${so.date}"/>
+	<c:set var="sh_id" value="${so.sh_id}"/>
+	<c:set var="p_id" value="${so.p_id}"/>
+	
+	
+	
+	<tr>
+		<td>Shop Order</td>
+		<td>${so.shop_order}</td>
+	</tr>
+	<tr>
+		<td>Shop Name</td>
+		<td>${so.shop_name}</td>
+	</tr>
+	<tr>
+		<td>shop No</td>
+		<td>${so.shop_no}</td>
+	</tr>
+	<tr>
+		<td>Address</td>
+		<td>${so.shop_address}</td>
+	</tr>
+	<tr>
+		<td>Quantity</td>
+		<td>${so.qty}</td>
+	</tr>
+	
+	<tr>
+		<td>Unite Price</td>
+		<td>${so.unite_price}</td>
+	</tr>
+	
+	<tr>
+		<td>Date</td>
+		<td>${so.date}</td>
+	</tr>
+	
+	<tr>
+		<td>Shop ID</td>
+		<td>${so.sh_id}</td>
+	</tr>
+	
+	<tr>
+		<td>Product ID</td>
+		<td>${so.p_id}</td>
+	</tr>
+	
+	
+	
+
+
+	</c:forEach>
+	</table>
+	
+	 
   <br>
   <br><br>
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -152,7 +167,7 @@ ResultSet rs=st.executeQuery(sql);
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <li> <a href="#"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -164,11 +179,11 @@ ResultSet rs=st.executeQuery(sql);
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <li> <a href="#"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
-                        <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
+                        <li> <a href="#"> Product</a> </li>
                         <li> <a href="#"> Sales</a> </li>
-                        <li> <a href="TransportHome.jsp"> Transport </a> </li>
+                        <li> <a href="#"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>
                   </div>
@@ -190,10 +205,7 @@ ResultSet rs=st.executeQuery(sql);
       </div>
    </div>
 </div>
-</footer>   
-    
-
-
+</footer>
 	
 	
 </body>
