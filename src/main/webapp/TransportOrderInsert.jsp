@@ -1,23 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Transport Management</title>
-
+<title>Transport Order Insert</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
+
+
 <link rel="stylesheet" href="web/css/transport.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+<link rel="stylesheet" href="web/css/deliver.css">
+
+<script src="web/js/de.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Dates in other months</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
+  
+   <script>
+  $( function() {
+    $( "#datepicker2" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
+  
+  
+  
 </head>
 <body>
 <div class="box-area">
@@ -31,7 +59,6 @@
 </div>
 		
 			    <a href="Home.jsp">Home</a>
-				
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
 				<a href="#">About</a>
@@ -49,44 +76,79 @@
 <br>
 <br>
 <br>
+<form name="myForm" action="TransportInsertServlet" onsubmit="return validateForm()" method="post" >
 
-
-<center>
-<h2>Transport Management</h2></center><br><br>
+ <h2> Insert Transport Details</h2></center><br><br>
 
            <div class="billformInner">
 
+<%
 
-<fieldset>
-
-<tr><th><center><a href="VehicleRegistration.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Registration " ></a><br></th></tr>
-<tr><th><center><a href="VehicleSearch.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Details "></a><br></th></tr>
-<tr><th><center><a href="TransportOrderTable.jsp"><input type="submit" name="submit" id="homeb" value=" Transport Order "></a><br></th></tr>
-<tr><th><center><a href="TransportSearch.jsp"><input type="submit" name="submit"  id="homeb" value="View Transport Details "></a><br></th></tr>
-<tr><th><center><a href="TransportDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Transport Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
-</div>
-
-		
-		
-       
-
+ 	Class.forName("com.mysql.jdbc.Driver").newInstance();
+    Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","SHD123");
+     String shop_order=request.getParameter("shop_order");
+     
+     
+     String sql="SELECT shop_order from shop_order where shop_order='"+shop_order+"'";
+     Statement st=conn.createStatement();
+     ResultSet rs=st.executeQuery(sql);
 
  
+
+     while(rs.next()){
+         
+         %>
+
+<center><table>
+ <tr>
+   <th> <h3>Transport id</h3></th>  <th><input  type="text" name="t_id" name="text" id="t_id" placeholder="DE1"required><br><br></th></tr>
+    <tr>
+     <th> <h3>Transport Distance</h3></th>  <th><input  type="text" name="t_distance" name="text" id="t_distance" placeholder="00Km" required><br><br></th></tr>
+    <tr>
+     <th> <h3>Price Per Km</h3></th>  <th><input  type="text" name="t_price" name="text" id="t_price" placeholder="Rs" required><br><br></th></tr>
+    
+     <tr>
+    <th><h3>Date</h3></th> <th><input type="text"  name="date" name="text" id="datepicker" placeholder="MM-DD-YYYY" required><br><br></th></tr>
+     <tr>
+    <th><h3>Vehicle no</h3></th> <th><input type="text"  name="vehi_no" name="text" id="vehi_no" placeholder="XX-XXXX" required><br><br></th></tr>
+     <tr>
+    <th><h3>Shop order id</h3></th> <th><input type="text"  name="shop_order" name="text" id="shop_order" value="<%=rs.getString(1)%>" placeholder="D1"><br><br></th></tr>
+     
+   
+    
+     </table>
+     
+             <%
+     }
+       
+   
+%>
+    
+      <input type="submit" name="submit" value="Insert"  id="submit2" onclick="alert('Transport Details Insert!!');">
+       <input type="reset" name="reset" value="Clear"  id="reset" onclick="alert('You want to clear this??');">
+    <br><br>
+     
+     </form>
+       <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -155,6 +217,7 @@
    </div>
 </div>
 </footer>
-</body>
+   
 
+</body>
 </html>

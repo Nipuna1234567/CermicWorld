@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
-<head>
 <meta charset="ISO-8859-1">
-<title>Transport Management</title>
-
+<title>Transport Orders</title>
+<link rel="stylesheet" href="web/css/deliver.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/transport.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+<link rel="stylesheet" href="web/css/deliver.css">
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -29,9 +29,7 @@
     <div class="content">
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
-		
-			    <a href="Home.jsp">Home</a>
-				
+		 		<a href="Home.jsp">Home</a>
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
 				<a href="#">About</a>
@@ -49,44 +47,89 @@
 <br>
 <br>
 <br>
-
+<br>
+<br>
 
 <center>
-<h2>Transport Management</h2></center><br><br>
 
-           <div class="billformInner">
+<div class="topic">
+					<h1>Transport Orders</h1>	
+				</div>	
 
 
-<fieldset>
-
-<tr><th><center><a href="VehicleRegistration.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Registration " ></a><br></th></tr>
-<tr><th><center><a href="VehicleSearch.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Details "></a><br></th></tr>
-<tr><th><center><a href="TransportOrderTable.jsp"><input type="submit" name="submit" id="homeb" value=" Transport Order "></a><br></th></tr>
-<tr><th><center><a href="TransportSearch.jsp"><input type="submit" name="submit"  id="homeb" value="View Transport Details "></a><br></th></tr>
-<tr><th><center><a href="TransportDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Transport Report</button></a><br><br><br></th></tr>
+<table class="center"><br>
 
 
 
-</fieldset>
-</div>
-</div>
-
-		
-		
-       
 
 
- 
+
+<tr>
+<th>Shop order id</th>
+<th> Shop name </th>
+<th>Quantity</th>
+<th> Date</th>
+<th>Product ID</th>
+
+
+<th>Deliver</th>
+
+</tr>
+
+
+
+<%
+try {
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","SHD123");
+String sql="Select * from shop_order" ;
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery(sql);
+while(rs.next()){
+
+%>
+<tr>
+<td name="shop_order"><%=rs.getString(1)%></td>
+<td name="shop_name"><%=rs.getString(2)%></td>
+<td name="qty"><%=rs.getString(5)%></td>
+<td name="date"><%=rs.getString(7)%></td>
+<td name="p_id"><%=rs.getString(9)%></td>
+
+
+
+<td><a href='TransportOrderInsert.jsp?shop_order=<%=rs.getString(1) %>' id="deliver2">Deliver</a></td>
+</tr>
+<%
+}
+
+
+}catch(Exception e)
+{
+e.printStackTrace();
+}
+%>
+
+</table>
+   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -155,6 +198,6 @@
    </div>
 </div>
 </footer>
-</body>
 
+</body>
 </html>
