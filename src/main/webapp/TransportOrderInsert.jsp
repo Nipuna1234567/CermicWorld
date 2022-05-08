@@ -101,7 +101,7 @@
 
 <center><table>
  <tr>
-   <th> <h3>Transport id</h3></th>  <th><input  type="text" name="t_id" name="text" id="t_id" placeholder="DE1"required><br><br></th></tr>
+   <th> <h3>Transport id</h3></th>  <th><input  type="text" name="t_id" name="text" id="t_id" placeholder="T01"required><br><br></th></tr>
     <tr>
      <th> <h3>Transport Distance</h3></th>  <th><input  type="text" name="t_distance" name="text" id="t_distance" placeholder="00Km" required><br><br></th></tr>
     <tr>
