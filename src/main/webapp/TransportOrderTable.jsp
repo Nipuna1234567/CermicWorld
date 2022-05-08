@@ -72,7 +72,7 @@
 <th>Product ID</th>
 
 
-<th>Deliver</th>
+<th>Transport</th>
 
 </tr>
 
@@ -97,7 +97,7 @@ while(rs.next()){
 
 
 
-<td><a href='TransportOrderInsert.jsp?shop_order=<%=rs.getString(1) %>' id="deliver2">Deliver</a></td>
+<td><a href='TransportOrderInsert.jsp?shop_order=<%=rs.getString(1) %>' id="deliver3"> <i class="fas fa-shipping-fast"></i>&nbsp Click To Transport</a></td>
 </tr>
 <%
 }
