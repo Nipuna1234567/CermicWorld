@@ -5,7 +5,7 @@
 <html>
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Insert title here</title>
+	<title>View Shop Order Details</title>
 	
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -55,7 +55,7 @@
 
 <center>
 	<div class="topic">
-<h1>Add Shop Order</h1>
+<h1>View Shop Order Details</h1>
 </div>
 <table class="center"><br>
 

@@ -138,6 +138,34 @@ public class ShopOrderDBUtil {
 					
 						
 					}
+					
+				//Update	
+				public static boolean ShopOrderUpdate(String shop_order,String shop_name,String shop_no,String shop_address,String qty,String unite_price,String date,String sh_id,String p_id) {
+
+								try {
+							
+								con=ShopOrderConnect.getConnection();
+								stmt=con.createStatement();
+								String sql="update shop_order set shop_order='"+shop_order+"', shop_name='"+shop_name+"' , shop_no='"+shop_no+"' , shop_address='"+shop_address+"' , qty='"+qty+"' ,unite_price='"+unite_price+"' , date='"+date+"' , sh_id='"+sh_id+"' , p_id='"+p_id+"'"
+								+"where shop_order='"+shop_order+"'" ;
+								int rs=stmt.executeUpdate(sql);
+
+								if(rs>0)
+								{
+								isSuccess=true;
+								}
+								else
+								{
+								isSuccess=false;
+								}
+								}catch(Exception e) {
+
+
+
+								e.printStackTrace();
+								}
+								return isSuccess;
+								}
 
 
 					public static List<ShopOrder>getUpdateshoporder(String shop_order){
@@ -184,9 +212,35 @@ public class ShopOrderDBUtil {
 
 
 					}
+					
+				//Delete	
+					public static boolean Delete(String shop_order) {
+						try {
+						con=ShopOrderConnect.getConnection();
+						stmt=con.createStatement();
+						String sql="Delete from shop_order where shop_order='"+shop_order+"' ";
+						int rs=stmt.executeUpdate(sql);
+
+						if(rs>0)
+						{
+						isSuccess=true;
+						}
+						else
+						{
+						isSuccess=false;
+						}
 
 
-				
+						}
+
+						catch(Exception e)
+						{
+						e.printStackTrace();
+						}
+						return isSuccess;	
+
+
+					}
 						
 					
 					

@@ -71,7 +71,7 @@ ResultSet rs=st.executeQuery(sql);
  while(rs.next()){
 %>
 
-<h1>Update Shops</h1>	
+<h1>Update Shop</h1>	
 <center>
 <table>
 
