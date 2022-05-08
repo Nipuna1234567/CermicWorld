@@ -4,20 +4,18 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Transport Management</title>
-
+<title>Delete Transport Details</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/transport.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+<link rel="stylesheet" href="web/css/deliver.css">
+
 </head>
 <body>
 <div class="box-area">
@@ -30,8 +28,7 @@
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
 		
-			    <a href="Home.jsp">Home</a>
-				
+			     <a href="Home.jsp">Home</a>
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
 				<a href="#">About</a>
@@ -49,44 +46,75 @@
 <br>
 <br>
 <br>
+<br>
+<br>
 
 
-<center>
-<h2>Transport Management</h2></center><br><br>
-
-           <div class="billformInner">
-
-
-<fieldset>
-
-<tr><th><center><a href="VehicleRegistration.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Registration " ></a><br></th></tr>
-<tr><th><center><a href="VehicleSearch.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Details "></a><br></th></tr>
-<tr><th><center><a href="TransportOrderTable.jsp"><input type="submit" name="submit" id="homeb" value=" Transport Order "></a><br></th></tr>
-<tr><th><center><a href="TransportSearch.jsp"><input type="submit" name="submit"  id="homeb" value="View Transport Details "></a><br></th></tr>
-<tr><th><center><a href="TransportDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Transport Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
-</div>
-
-		
-		
-       
-
-
+<%
+ String t_id= request.getParameter("t_id");
+ String t_distance=request.getParameter("t_distance");
+ String t_price=request.getParameter("t_price");
+ String t_amount=request.getParameter("t_amount");
+ String date=request.getParameter("date");
+ String vehi_no=request.getParameter("vehi_no");
+ String shop_order=request.getParameter("shop_order");
  
+
+%>
+
+<form name="myForm" action="TransportDeleteServlet" onsubmit="return validateForm()" method="post" >
+<center>
+<div class="topic">
+<h1><center>Delete Transport Details</h1>	
+</div>
+<br>
+        <br>
+        <br>
+     
+<table>
+ <tr>
+   <th> <h3>Transport id</h3></th>  <th><input  type="text" name="t_id" name="text" id="t_id" placeholder="DE1" value="<%=t_id %>"><br><br></th></tr>
+    <tr>
+     <th> <h3>Transport Distance</h3></th>  <th><input  type="text" name="t_distance" name="text" id="t_distance" placeholder="00Km" value="<%=t_distance %>"><br><br></th></tr>
+    <tr>
+     <th> <h3>Price Per Km</h3></th>  <th><input  type="text" name="t_price" name="text" id="t_price" placeholder="Rs" value="<%=t_price %>"><br><br></th></tr>
+    <tr>
+    <th><h3>Transport Amount</h3></th> <th><input type="text"  name="t_amount" name="text" id="t_amount" placeholder="Rs" value="<%=t_amount %>"><br><br></th></tr>
+     <tr>
+    <th><h3>Date</h3></th> <th><input type="text"  name="date" name="text" id="datepicker" placeholder="MM-DD-YYYY" value="<%=date %>" required><br><br></th></tr>
+     <tr>
+    <th><h3>Vehicle no</h3></th> <th><input type="text"  name="vehi_no" name="text" id="vehi_no" placeholder="XX-XXXX" value="<%=vehi_no %>"><br><br></th></tr>
+     <tr>
+    <th><h3>Shop order id</h3></th> <th><input type="text"  name="shop_order" name="text" id="shop_order" placeholder="D1" value="<%=shop_order %>"><br><br></th></tr>
+    
+   
+    
+     </table>
+       <input type="submit" name="update" value="Delete" id="delete" onclick="alert('Successfully Delete Transport Details!!!');">
+    <br><br>
+     
+     </form>
+     
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -156,5 +184,4 @@
 </div>
 </footer>
 </body>
-
 </html>

@@ -4,22 +4,22 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Transport Management</title>
-
+<title>Transport Order Search</title>
+<link rel="stylesheet" href="web/css/deliver.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/transport.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+<link rel="stylesheet" href="web/css/deliver.css">
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -29,9 +29,7 @@
     <div class="content">
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
-		
-			    <a href="Home.jsp">Home</a>
-				
+		 		<a href="Home.jsp">Home</a>
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
 				<a href="#">About</a>
@@ -49,44 +47,41 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<h2>Search Transport Details</h2><br><br>	
 
-
-<center>
-<h2>Transport Management</h2></center><br><br>
-
-           <div class="billformInner">
-
-
-<fieldset>
-
-<tr><th><center><a href="VehicleRegistration.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Registration " ></a><br></th></tr>
-<tr><th><center><a href="VehicleSearch.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Details "></a><br></th></tr>
-<tr><th><center><a href="TransportOrderTable.jsp"><input type="submit" name="submit" id="homeb" value=" Transport Order "></a><br></th></tr>
-<tr><th><center><a href="TransportSearch.jsp"><input type="submit" name="submit"  id="homeb" value="View Transport Details "></a><br></th></tr>
-<tr><th><center><a href="TransportDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Transport Report</button></a><br><br><br></th></tr>
-
-
-
-</fieldset>
-</div>
-</div>
 
 		
-		
-       
 
+<form action="TransportSearchServlet" method="post">
+
+<lable>Transport ID :</lable>
+<input type="text" name="t_id" required><br><br><br>
 
  
+<button type="submit"  name="submit"  id="search" ><i class="fa fa-search"></i> Search</button>
+</form>
+   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -155,6 +150,6 @@
    </div>
 </div>
 </footer>
-</body>
 
+</body>
 </html>

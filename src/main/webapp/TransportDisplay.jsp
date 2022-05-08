@@ -1,25 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Transport Management</title>
-
+<title>Transport Details</title>
+<link rel="stylesheet" href="web/css/deliver.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-	
-	<script src="web/js/de.js"></script>
-	
-<!-- Footer-->	
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/transport.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+<link rel="stylesheet" href="web/css/deliver.css">
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -29,9 +29,7 @@
     <div class="content">
 <img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
 </div>
-		
-			    <a href="Home.jsp">Home</a>
-				
+		 		<a href="Home.jsp">Home</a>
 				<a href="TransportHome.jsp">Transport</a>
 				<a href="#">Contact</a>
 				<a href="#">About</a>
@@ -49,44 +47,133 @@
 <br>
 <br>
 <br>
-
+<br>
+<br>
 
 <center>
-<h2>Transport Management</h2></center><br><br>
 
-           <div class="billformInner">
-
-
-<fieldset>
-
-<tr><th><center><a href="VehicleRegistration.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Registration " ></a><br></th></tr>
-<tr><th><center><a href="VehicleSearch.jsp"><input type="submit" name="submit" id="homeb" value="Transport Vehicle Details "></a><br></th></tr>
-<tr><th><center><a href="TransportOrderTable.jsp"><input type="submit" name="submit" id="homeb" value=" Transport Order "></a><br></th></tr>
-<tr><th><center><a href="TransportSearch.jsp"><input type="submit" name="submit"  id="homeb" value="View Transport Details "></a><br></th></tr>
-<tr><th><center><a href="TransportDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Transport Report</button></a><br><br><br></th></tr>
+<div class="topic">
+					<h1>Transport Details</h1>	
+				</div>	
+<table class="center"> <br>
+ 		<br>
+        <br>
+      
 
 
+<c:forEach var="Transportdetails" items="${Transportdetails}">
 
-</fieldset>
-</div>
-</div>
 
-		
-		
-       
+<c:set var="t_id" value="${Transportdetails.t_id}"/>
+<c:set var="t_distance" value="${Transportdetails.t_distance}"/>
+<c:set var="t_price" value="${Transportdetails.t_price}"/>
+<c:set var="t_amount" value="${Transportdetails.t_amount}"/>
+<c:set var="date" value="${Transportdetails.date}"/>
+<c:set var="vehi_no" value="${Transportdetails.vehi_no}"/>
+<c:set var="shop_order" value="${Transportdetails.shop_order}"/>
 
+
+<tr>
+     <td>Transport id</td>
+<td>${Transportdetails.t_id}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Transport Distance</td>
+<td>${Transportdetails.t_distance}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>price per km</td>
+<td>${Transportdetails.t_price}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Transport Amount</td>
+<td>${Transportdetails.t_amount}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Date</td>
+<td>${Transportdetails.date}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>vehicle no</td>
+<td>${Transportdetails.vehi_no}</td>
+</tr> 
+<tr> 
+<tr>
+     <td>Shop Order ID</td>
+<td>${Transportdetails.shop_order}</td>
+</tr> 
+
+
+
+<tr> 
+
+</c:forEach>
 
  
+</table>
+
+<c:url value="TransportUpdate.jsp" var="update">
+
+
+<c:param name="t_id" value="${t_id }"></c:param>
+<c:param name="t_distance" value="${t_distance }"></c:param>
+<c:param name="t_price" value="${t_price }"></c:param>
+<c:param name="t_amount" value="${t_amount }"></c:param>
+<c:param name="date" value="${date}"></c:param>
+<c:param name="vehi_no" value="${vehi_no}"></c:param>
+<c:param name="shop_order" value="${shop_order }"></c:param>
+
+</c:url>
+<a  href="${update }">
+
+<button type="submit"  name="update"  id="update" ><i class="fas fa-shipping-fast"></i> &nbsp Update</button>
+  
+</a>
+
+<c:url value="TransportDelete.jsp" var="delete">
+
+<c:param name="t_id" value="${t_id }"></c:param>
+<c:param name="t_distance" value="${t_distance }"></c:param>
+<c:param name="t_price" value="${t_price }"></c:param>
+<c:param name="t_amount" value="${t_amount }"></c:param>
+<c:param name="date" value="${date}"></c:param>
+<c:param name="vehi_no" value="${vehi_no}"></c:param>
+<c:param name="shop_order" value="${shop_order }"></c:param>
+
+
+</c:url>
+
+
+<a href="${delete}">
+
+<button type="submit"  name="delete"  id="delete" ><i class="fa fa-trash-alt"></i> &nbsp Delete</button>
+
+</a>
+   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -156,5 +243,4 @@
 </div>
 </footer>
 </body>
-
 </html>
