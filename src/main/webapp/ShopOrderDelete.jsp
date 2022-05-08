@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sales Management</title>
+<title>Delete Shop Order</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -15,12 +16,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
-	<link rel="stylesheet" href="web/css/shopinsert.css">
-	
+<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+<link rel="stylesheet" href="web/css/shopinsert.css">
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -32,9 +33,9 @@
 </div>
 		
 			    <a href="Home.jsp">Home</a>
-				<a href="#">About</a>
 				<a href="SalesHome.jsp">Sales</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -51,43 +52,91 @@
 <br>
 
 
+
+
+
+<form name="myForm" action="ShopOrderDeleteServlet" onsubmit="return validateForm()" method="post" >
+
+<%
+
+
+ Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","Nipuna1234");
+String shop_order=request.getParameter("shop_order");
+
+String sql="Select * from shop_order where shop_order='"+shop_order+"'" ;
+Statement st=conn.createStatement();
+ResultSet rs=st.executeQuery(sql);
+
+ while(rs.next()){
+%>
+
+<h1>Delete Shop Order</h1>	
 <center>
-<h2>Sales Management</h2></center><br><br>
-
-           <div class="billformInner">
+<table>
 
 
-<fieldset>
+                 
+    <tr>
+   <th><h3>Shop Order</h3></th> <th><input type="text"  name="shop_order" id="shop_order" placeholder="ID"  value="<%=rs.getString(1)%>" readonly><br><br></th></tr>
+    
+  
+    <tr>
+   <th> <h3>Shop Name</h3></th>  <th><input  type="text" name="shop_name" name="text" id="shop_name" placeholder="Shop Name"  value="<%=rs.getString(2)%>" ><br><br></th></tr>
+   
+   <tr>
+   <th> <h3>Shop No</h3></th>  <th><input  type="text" name="shop_no" name="text" id="shop_no" placeholder="Shop No"  value="<%=rs.getString(3)%>" ><br><br></th></tr>
+   
+   <tr>
+   <th> <h3>Shop Address</h3></th>  <th><input  type="text" name="shop_address" name="text" id="shop_address" placeholder="Shop Address"  value="<%=rs.getString(4)%>" ><br><br></th></tr>
+   
+    <tr>
+   <th> <h3>Quantity</h3></th>  <th><input  type="text" name="qty" name="text" id="qty" placeholder="Quantity"  value="<%=rs.getString(5)%>" ><br><br></th></tr>
+   
+    <tr>
+   <th> <h3>Unite Price</h3></th>  <th><input  type="text" name="unite_price" name="text" id="unite_price" placeholder="Unite Price"  value="<%=rs.getString(6)%>" ><br><br></th></tr>
+   
+    <tr>
+   <th> <h3>Date</h3></th>  <th><input  type="text" name="date" name="text" id="date" placeholder="Date"  value="<%=rs.getString(7)%>" ><br><br></th></tr>
+   
+    <tr>
+   <th> <h3>Shop ID</h3></th>  <th><input  type="text" name="sh_id" name="text" id="sh_id" placeholder="Shop ID"  value="<%=rs.getString(8)%>" ><br><br></th></tr>
+   
+    <tr>
+   <th> <h3>Product ID</h3></th>  <th><input  type="text" name="p_id" name="text" id="p_id" placeholder="Product ID"  value="<%=rs.getString(9)%>" ><br><br></th></tr>
+   
+                  <% 
+ }
+ %>
+    
+    </table>
+   
+    <input type="submit" name="delete" value="Delete" id="delete" onclick="alert('Are sure you want to delete shop details?');">
+    <br><br>
 
-<tr><th><center><a href="ShopInsert.jsp"><input type="submit" name="submit" id="homeb" value="Add New Shops " ></a><br></th></tr>
-<tr><th><center><a href="ShopdetailsView.jsp"><input type="submit" name="submit" id="homeb" value="View Shop Details "></a><br></th></tr>
-<tr><th><center><a href="ShopOrderInsert.jsp"><input type="submit" name="submit" id="homeb" value=" Add Shops Order"></a><br></th></tr>
-<tr><th><center><a href="ShopOrderSearch.jsp"><input type="submit" name="submit"  id="homeb" value="Search Shop Order Details "></a><br></th></tr>
-<tr><th><center><a href="ShopOrderdetailsView.jsp"><input type="submit" name="submit"  id="homeb" value="View Shops Order Details "></a><br></th></tr>
-<tr><th><center><a href="OrderReport.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Shop Order Report</button></a><br><br><br></th></tr>
 
-
-
-</fieldset>
-</div>
-</div>
-
-		
-		
-       
-
-
- 
+	</form>
+     
+    	   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -117,7 +166,7 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -129,11 +178,11 @@
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> Supplier</a> </li>
-                        <li> <a href="#"> Product</a> </li>
+                        <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
                         <li> <a href="#"> Sales</a> </li>
-                        <li> <a href="#"> Transport </a> </li>
+                        <li> <a href="TransportHome.jsp"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>
                   </div>
@@ -155,7 +204,11 @@
       </div>
    </div>
 </div>
-</footer>
-</body>
+</footer>   
+    
 
+
+	
+	
+</body>
 </html>

@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+      <%@page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Sales Management</title>
+<title>Shop Order Table</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -12,12 +13,14 @@
 	<script src="web/js/de.js"></script>
 	
 <!-- Footer-->	
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+<link rel="stylesheet" href="web/css/shopinsert.css">
 	
-	<link rel="stylesheet" href="web/css/shopinsert.css">
 	
 </head>
 <body>
@@ -50,35 +53,75 @@
 <br>
 <br>
 
+<center>
+<h2>View Shop's Order Details</h2></center>
 
 <center>
-<h2>Sales Management</h2></center><br><br>
 
-           <div class="billformInner">
-
-
-<fieldset>
-
-<tr><th><center><a href="ShopInsert.jsp"><input type="submit" name="submit" id="homeb" value="Add New Shops " ></a><br></th></tr>
-<tr><th><center><a href="ShopdetailsView.jsp"><input type="submit" name="submit" id="homeb" value="View Shop Details "></a><br></th></tr>
-<tr><th><center><a href="ShopOrderInsert.jsp"><input type="submit" name="submit" id="homeb" value=" Add Shops Order"></a><br></th></tr>
-<tr><th><center><a href="ShopOrderSearch.jsp"><input type="submit" name="submit"  id="homeb" value="Search Shop Order Details "></a><br></th></tr>
-<tr><th><center><a href="ShopOrderdetailsView.jsp"><input type="submit" name="submit"  id="homeb" value="View Shops Order Details "></a><br></th></tr>
-<tr><th><center><a href="OrderReport.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Shop Order Report</button></a><br><br><br></th></tr>
+<table class="center"><br>
 
 
 
-</fieldset>
-</div>
-</div>
+<tr>
+<th>Shop Order</th>
+<th>Shop Name </th>
+<th>Shop No</th>
+<th>Shop Address</th>
+<th>Quantity</th>
+<th>Unite Price</th>
+<th>Date</th>
+<th>Shop ID</th>
+<th>Product ID</th>
 
-		
-		
-       
+
+<th>Update</th>
+<th>Delete</th>
 
 
- 
-  <br>
+</tr>
+
+
+
+<%
+try {
+Class.forName("com.mysql.jdbc.Driver").newInstance();
+Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/ceramicworld","root","Nipuna1234");
+String sql="Select * from shop_order" ;
+Statement st=con.createStatement();
+ResultSet rs=st.executeQuery(sql);
+while(rs.next()){
+
+%>
+<tr>
+<td name="shop_order"><%=rs.getString(1)%></td>
+<td name="shop_name"><%=rs.getString(2)%></td>
+<td name="shop_no"><%=rs.getString(3)%></td>
+<td name="shop_address"><%=rs.getString(4)%></td>
+<td name="qty"><%=rs.getString(5)%></td>
+<td name="unite_price"><%=rs.getString(6)%></td>
+<td name="date"><%=rs.getString(7)%></td>
+<td name="sh_id"><%=rs.getString(8)%></td>
+<td name="p_id"><%=rs.getString(9)%></td>
+
+
+
+<td><a href='ShopOrderUpdate.jsp?shop_order=<%=rs.getString(1) %>'  class="update" id="deliver2">Update</a></td>
+<td><a href='ShopOrderDelete.jsp?shop_order=<%=rs.getString(1) %>' class="update" id="delete2">Delete</a></td>
+
+</tr>
+<%
+}
+
+
+}catch(Exception e)
+{
+e.printStackTrace();
+}
+%>
+
+</table>
+
+ <br>
   <br><br>
   <br>
   <br>
@@ -156,6 +199,6 @@
    </div>
 </div>
 </footer>
-</body>
 
+</body>
 </html>

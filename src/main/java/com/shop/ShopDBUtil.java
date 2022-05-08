@@ -108,6 +108,7 @@ public class ShopDBUtil {
 				
 						}
 					
+			//Update		
 		    public static boolean ShopUpdate(String sh_id,String sh_name,String sh_phone,String sh_address) {
 
 						try {
@@ -176,7 +177,7 @@ public class ShopDBUtil {
 
 						}
 						
-				
+			//Delete	
 			 public static boolean Delete(String sh_id) {
 							try {
 							con=ShopDBConnect.getConnection();

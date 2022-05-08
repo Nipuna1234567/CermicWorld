@@ -55,7 +55,7 @@
 
 <center>
 	<div class="topic">
-<h1>Add Shops</h1>
+<h1>Add Shop</h1>
 </div>
 <table class="center"><br>
 
