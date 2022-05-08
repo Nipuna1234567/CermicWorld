@@ -31,7 +31,7 @@ public class sAdminLoginServlet extends HttpServlet {
 			List<sadmin> adminDetails = sAdminDButil.getsadmin(user_name);
 			request.setAttribute("adminDetails", adminDetails);
 			
-			RequestDispatcher dis = request.getRequestDispatcher("ProductManagementHome.jsp");
+			RequestDispatcher dis = request.getRequestDispatcher("SupplierHome.jsp");
 			dis.forward(request, response);
 		} else {
 		

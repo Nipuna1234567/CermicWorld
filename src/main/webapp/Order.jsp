@@ -16,7 +16,23 @@
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
 <link rel="stylesheet" href="web/css/Order.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+
+<script src="web/js/de.js"> </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Datepicker - Dates in other months</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
+  </script>
 	
 </head>
 <body>
@@ -66,7 +82,7 @@
     <tr>
    <th><h3>Quantity</h3></th> <th><input type="text"  name="qty" id="qty" placeholder="Quantity" ><br><br></th></tr>
    <tr>
-   <th><h3>Date</h3></th> <th><input type="text"  name="date" id="date" placeholder="Date" ><br><br></th></tr>
+   <th> <h3>Date</h3></th>  <th><input  type="text" name="date" name="text" id="datepicker"  placeholder="MM-DD-YYYY" required><br><br></th></tr>
 	<tr>		
  				
     <th><h3>Company ID</h3></th> <th><input type="text"  name="comp_id" id="comp_id" placeholder="Company ID" ><br><br></th></tr>
