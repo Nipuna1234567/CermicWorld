@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Supplier Management</title>
+<title>Insert title here</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
@@ -15,11 +15,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer.css">
 <link rel="stylesheet" type="text/css" href="web/css/Footer2.css">
-<link rel="stylesheet" href="web/css/Supplier.css">
-	<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
-	
+<link rel="stylesheet" type="text/css" href="web/css/stylesce.css">
+<link rel="stylesheet" href="web/css/Order.css"> 
+
 </head>
 <body>
+
 <div class="box-area">
 <header>
 	<div class="wrapper">
@@ -31,9 +32,9 @@
 </div>
 		
 			    <a href="Home.jsp">Home</a>
-				<a href="#">About</a>
-				<a href="SalesHome.jsp">Supplier</a>
+				<a href="SupplierHome.jsp">Supplier</a>
 				<a href="#">Contact</a>
+				<a href="#">About</a>
 		</nav>
 		
 	</div>
@@ -49,41 +50,68 @@
 <br>
 <br>
 
+<h2>View Order Report</h2></center><br><br>
+<br>
+<br>
+<br>
+<br>
 
-<center>
-<h2>Supplier Management</h2></center><br><br>
-
-           <div class="billformInner">
-
-
-<fieldset>
-
-<tr><th><center><a href="SupplierCompany.jsp"><input type="submit" name="submit" id="homeb" value="Add New Supplier Company " ></a><br></th></tr>
-<tr><th><center><a href="Order.jsp"><input type="submit" name="submit" id="homeb" value="Add Supplier Order "></a><br></th></tr>
-<tr><th><center><a href="OrderdetailsView.jsp"><input type="submit" name="submit" id="homeb" value=" View Order Details "></a><br></th></tr>
-<tr><th><center><a href="OrderSearch.jsp"><input type="submit" name="submit"  id="homeb" value="Search Supplier Order"></a><br></th></tr>
-<tr><th><center><a href="OrderDate.jsp"><button type="submit"   name="submit"  id="homec" ><i class="fa fa-download"></i> Monthly Order Report</button></a><br><br><br></th></tr>
+<form action="OrderReport.jsp">
 
 
+<tr>
+<td><label>Year &nbsp; :</label></td>
+<td><input type="text" name="year" placeholder="&nbsp;2021" autocomplete="on"required></td>
+</tr>
+<br>
+<br>
+<br>
+<tr>
+<td><label>Month : </label></td>
+<td><select name="month">
+<option value="00">Select Month</option>
+<option value="01">January</option>
+<option value="02">February</option>
+<option value="03">March</option>
+<option value="04">April</option>
+<option value="05">May</option>
+<option value="06">June</option>
+<option value="07">July</option>
+<option value="08">August</option>
+<option value="09">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select></td>
+</tr>
 
-</fieldset>
+<div class="onebtn">
+<!--<input type="submit" id="submitBtn" value="Submit">-->
+<button type="submit"  name="submit"  id="billb" ><i class="fa fa-search"></i> View Monthly Order Details</button>
+
 </div>
-</div>
+</form>
 
-	       
-
-
- 
+ <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br><br>				
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br><br>
   <br>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <br>
 
+</div>
 
 <footer class="container-fluid bg-grey py-5">
 <div class="container">
@@ -113,7 +141,7 @@
                <div class="row ">
                   <div class="col-md-6">
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
                         <li> <a href="#"> About</a> </li>
                         <li> <a href="#"> Service</a> </li>
                         <li> <a href="#"> Team</a> </li>
@@ -125,11 +153,11 @@
                   <div class="col-md-6 px-4">
                   
                      <ul>
-                        <li> <a href="#"> Home</a> </li>
-                        <li> <a href="#"> Supplier</a> </li>
-                        <li> <a href="#"> Product</a> </li>
-                        <li> <a href="#"> Sales</a> </li>
-                        <li> <a href="#"> Transport </a> </li>
+                        <li> <a href="Home.jsp"> Home</a> </li>
+                        <li> <a href="SupplierHome.jsp"> Supplier</a> </li>
+                        <li> <a href="ProductManagemenetHome.jsp"> Product</a> </li>
+                        <li> <a href="SalesHome.jsp"> Sales</a> </li>
+                        <li> <a href="TransportHome.jsp"> Transport </a> </li>
                         <li> <a href="#"> Policy</a> </li>
                      </ul>
                   </div>
@@ -151,13 +179,7 @@
       </div>
    </div>
 </div>
-</footer>	
-		
-       
-
-
- 
-
+</footer>
+	
 </body>
-
 </html>
