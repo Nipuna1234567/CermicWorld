@@ -70,8 +70,7 @@ ResultSet resultSet = null;
 	<div class="wrapper">
 
 <div id="content">
-<center>
-<img class="img" src="web/images/lo.png"  width="850px" height="400px"  ">
+
 <center>
 <div class="topic">
 					<h1>Monthly Delivery Details </h1>	
